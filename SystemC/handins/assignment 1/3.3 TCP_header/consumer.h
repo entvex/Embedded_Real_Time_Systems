@@ -15,6 +15,7 @@ SC_MODULE(consumer){
 			while (1) {
 				TCPHeader* object = in->read();
 				std::cout << "Timestamp: " << sc_time_stamp() << " - Seq: " << object->SequenceNumber << std::endl;
+				delete object;
 			}
 		}
 	}
