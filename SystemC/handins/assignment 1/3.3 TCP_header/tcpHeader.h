@@ -6,7 +6,9 @@
  */
 #ifndef TCPHEADER_H_
 #define TCPHEADER_H_
+#include "stdafx.h"
 #include <systemc.h>
+#include "Header.h"
 
 #define PACKET_SIZE 512
 #define DATA_SIZE   (PACKET_SIZE-20)

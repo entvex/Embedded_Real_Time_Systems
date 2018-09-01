@@ -1,20 +1,20 @@
 #ifndef CONSUMER_H_
 #define CONSUMER_H_
-
+#include "stdafx.h"
 #include <systemc.h>
 #include <iostream>
+#include "tcpHeader.h"
 
 SC_MODULE(consumer){
-	sc_fifo_in<TCPHeader> in;
+	sc_fifo_in<TCPHeader*> in;
 
 	int counter = 0;
 	void consumer_thread(void) {
 		while(true)
 		{
-			TCPHeader object;
 			while (1) {
-				object = in.read();
-				//std::cout << "Timestamp: " << sc_time_stamp() << " - Seq: " << (int)object.SequenceNumber << std::endl;
+				TCPHeader* object = in->read();
+				std::cout << "Timestamp: " << sc_time_stamp() << " - Seq: " << object->SequenceNumber << std::endl;
 			}
 		}
 	}

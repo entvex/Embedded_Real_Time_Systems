@@ -1,12 +1,12 @@
 #ifndef PRODUCER_H_
 #define PRODUCER_H_
-
+#include "stdafx.h"
 #include <systemc.h>
 #include <stdlib.h>
 #include <iostream>
 #include "tcpHeader.h"
 SC_MODULE(producer){
-	sc_fifo_out<TCPHeader> out;
+	sc_fifo_out<TCPHeader*> out;
 	int min = 2;
 	int max = 10;
 	int counter = 0;
@@ -17,11 +17,11 @@ SC_MODULE(producer){
 			int random = rand() % min+max;
 			wait(random,SC_MS);
 
-			TCPHeader newpacket;
+			TCPHeader* newpacket = new TCPHeader();
 			counter++;
-			newpacket.SequenceNumber = counter;
+			newpacket->SequenceNumber = counter;
 
-			out.write(newpacket);
+			out->write(newpacket);
 		}
 	}
 

@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+#include ""
 #include "ModuleSingle.h"
 int sc_main(int argc, char* argv[]) {
 
@@ -6,4 +9,3 @@ int sc_main(int argc, char* argv[]) {
   sc_start(200,SC_MS);
   return 0;
 }
-
