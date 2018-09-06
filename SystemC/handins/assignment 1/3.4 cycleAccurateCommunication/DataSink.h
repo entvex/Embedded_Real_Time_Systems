@@ -9,29 +9,63 @@
 #define DATASINK_H_
 #include <systemc.h>
 #include <iostream>
+#include <fstream>
 #include "config.h"
 
 SC_MODULE(DataSink){
 
-	//sc_out<bool> ready;
-	//sc_in_clk CLK;
+	ofstream myfile;
 
-	sc_in<bool> vaild;
-	//sc_in<sc_int<DATA_BITS>> data;
-	//sc_in<sc_int<ERROR_BITS>> error;
-	//sc_port<sc_int<DATA_BITS>,0> channel;
+	sc_out<bool> ready;
+	sc_in_clk clk;
 
-	void sink_thread(void) {
-		while(true)
-		{
-			while (1) {
-				std::cout << "data: " << vaild->read() << std::endl;
-			}
+	sc_in<bool> valid;
+	sc_in< sc_uint<DATA_BITS> > data;
+	sc_in< sc_uint<ERROR_BITS> > error;
+	sc_in< sc_uint<CHANNEL_BITS> > channel;
+
+	sc_trace_file * tf;
+
+	void sink_method(void) {
+
+
+
+		if(valid.read() == true){
+			int data = this->data.read();
+			int error = this->error.read();
+			int channel = this->channel.read();
+
+			ready.write(false);
+
+			std::cout << "Data: " << data << " - Error: " << error << " - Channel: " << channel << std::endl;
+			myfile << "Data: " << data << std::endl;
+		}
+		else{
+			ready.write(true);
 		}
 	}
 
 	SC_CTOR (DataSink) {
-		SC_THREAD(sink_thread)
+		SC_METHOD(sink_method)
+		sensitive << clk;
+		dont_initialize();
+
+		tf = sc_create_vcd_trace_file("Waveform");
+		tf->set_time_unit(1,SC_NS);
+		sc_trace(tf,clk,"clock");
+		sc_trace(tf,ready,"ready");
+		sc_trace(tf,valid,"valid");
+		sc_trace(tf,channel,"channel");
+		sc_trace(tf,error,"error");
+		sc_trace(tf,data,"data");
+
+		myfile.open ("data.txt");
+
+	}
+
+	~DataSink(){
+		sc_close_vcd_trace_file(tf);
+		myfile.close();
 	}
 };
 

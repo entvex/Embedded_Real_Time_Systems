@@ -8,35 +8,36 @@
 #ifndef AVALONSTREAMINGBUS_H_
 #define AVALONSTREAMINGBUS_H_
 #include <systemc.h>
+#include <stdlib.h>
 #include "config.h"
 
-SC_MODULE(avelon){
+SC_MODULE(Source){
 
-	//sc_in<bool> ready;
-	//sc_in_clk CLK;
+	sc_in<bool> ready;
+	sc_in_clk clk;
 
-	sc_out<bool> vaild;
-	//sc_out<sc_int<DATA_BITS>> data;
-	//sc_out<sc_int<ERROR_BITS>> error;
-	//sc_port<sc_int<CHANNEL_BITS>,0> channel;
+	sc_out<bool> valid;
+	sc_out< sc_uint<DATA_BITS> > data;
+	sc_out< sc_uint<ERROR_BITS> > error;
+	sc_out< sc_uint<CHANNEL_BITS> > channel;
 
-	void avelon_thread(void) {
-		while(true)
-		{
-			while (1) {
+	void source_method(void) {
 
-				vaild.write(true);
-				wait();
-				//data.write(2);
-				//error.write(1);
-
-			}
+		if(ready.read() == true){
+			data.write(rand() % 65536);
+			error.write(rand() % 4);
+			channel.write(rand() % MAX_CHANNEL);
+			valid.write(true);
+		}
+		else{
+			valid.write(false);
 		}
 	}
 
-	SC_CTOR (avelon) {
-		SC_THREAD(avelon_thread)
-		//sensitive_pos << CLK;
+	SC_CTOR (Source) {
+		SC_METHOD(source_method)
+		sensitive << clk;
+		dont_initialize();
 	}
 };
 
