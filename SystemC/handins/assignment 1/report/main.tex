@@ -5,21 +5,34 @@
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{natbib}
+\usepackage{listings}
+\usepackage{color}
+\lstdefinestyle{customc++}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	numbers=left,
+	frame=single,
+	xleftmargin=\parindent,
+	language=C++,
+	captionpos=b,           % sets the caption-position to bottom
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
 \title{Embedded Real Time Systems - Assignment 1}
 \author{Henrik Bagger Jensen, David Jensen and Christian M. Lillelund}
-\date{September 2018}
+\date{\today}
 \begin{document}
 \maketitle
-\pagebreak
-\tableofcontents
-\pagebreak
+\include{Introduction}
 \include{ModuleSingle}
 \include{ModuleDouble}
 \include{ConsumerProducerTCP}
 \include{MasterSlaveST}
 \include{MasterSlaveAdapter}
-\tableofcontents
-\pagebreak
 \bibliographystyle{plain}
 \bibliography{bibtex}{}
 \end{document}
