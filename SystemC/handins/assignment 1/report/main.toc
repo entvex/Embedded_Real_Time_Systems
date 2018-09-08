@@ -1,6 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {2}Exercise 3.1 - ModuleSingle}{3}
-\contentsline {section}{\numberline {3}Exercise 3.2 - ModuleDouble}{4}
-\contentsline {section}{\numberline {4}Exercise 3.3 - Consumer and producer with TCP}{5}
-\contentsline {section}{\numberline {5}Exercise 3.4 - Master and slave with ST}{6}
-\contentsline {section}{\numberline {6}Exercise 3.5 - Master and slave with adapter}{7}

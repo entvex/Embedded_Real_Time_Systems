@@ -12,8 +12,8 @@
 *.cb2
 
 # Ignore latex master files
-report.pdf
-report.ptc
+main.pdf
+main.ptc
 
 ## Intermediate documents:
 *.dvi
