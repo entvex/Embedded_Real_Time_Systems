@@ -15,7 +15,7 @@ int sc_main(int argc, char* argv[]) {
 }
 \end{lstlisting}
 
-\noindent The ModuleSingle defines the Single module functionality that performs the exercise task. It contains a single thread \textit{my\_thread\_process} and a single method \textit{my\_method}. The method is static sensitive to the event \textit{my\_event}. Inside the method is simply a counter that increments a \textit{sc\_uint<4>} variable when invoked and outputs the value using cout. The thread executes in a while-loop that notifies the method every 2$MS$ by calling the event \textit{my\_event}. The counter variable is just 4 bits, so it resets when it wraps around (16 or higher). The code for ModuleSingle.h is shown in listing \ref{lst:modulesingleheader}.
+\noindent The ModuleSingle.h defines the Single module functionality that performs the exercise task. It contains a single thread \textit{my\_thread\_process} and a single method \textit{my\_method}. The method is static sensitive to the event \textit{my\_event}. Inside the method is simply a counter that increments a \textit{sc\_uint<4>} variable when invoked and outputs the value using cout. The thread executes in a while-loop that notifies the method every 2$MS$ by calling the event \textit{my\_event}. The counter variable is just 4 bits, so it resets when it wraps around (16 or higher). The code for ModuleSingle.h is shown in listing \ref{lst:modulesingleheader}.
 
 \begin{lstlisting}[style=customc++, caption=Implementation of ModuleSingle,
 label={lst:modulesingleheader}]
