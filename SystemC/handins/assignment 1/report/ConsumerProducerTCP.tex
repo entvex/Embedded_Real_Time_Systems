@@ -1,1 +1,76 @@
 \section{Exercise 3.3 - Consumer and producer with TCP}
+
+This exercise models a producer and consumer thread by two independent modules. They exchange messages (in this case TCP packets) via a SystemC \textit{sc\_fifo} queue, with the producer transmitting a new packet every 2-10$MS$. The consumer receives the packet on its queue and prints out the sequence number and time stamp. The definition of the \textit{TCPHeader} is found in the exercise. We extended the model to include multiple consumers receiving packets on different ports.
+
+\noindent Listing \ref{lst:tcpheadermain} shows the application file for our producer/consumer setup. We create one producer, two consumers and then two \textit{sc\_fifo} channels for each consumer. The outbound channel of the producer is set to both channels.
+
+\begin{lstlisting}[style=customc++, caption=Application file for producer/consumer.,
+label={lst:tcpheadermain}]
+int sc_main(int argc, char* argv[]) {
+
+	producer my_producer("producer");
+	consumer my_consumer1("consumer1");
+	consumer my_consumer2("consumer2");
+
+	sc_fifo<TCPHeader*> C1("C1");
+	sc_fifo<TCPHeader*> C2("C2");
+
+	my_producer.out(C1);
+	my_producer.out(C2);
+	my_consumer1.in(C1);
+	my_consumer2.in(C2);
+
+	sc_start(2000,SC_MS);
+	return 0;
+}
+\end{lstlisting}
+
+\noindent The producer internally uses a \textit{sc\_port} class to bind the two channel interfaces. The zero parameter allows binding a unlimited number of interfaces. We can access each binded channel using the index operator as shown in the \textit{producer\_thread} and write to it. The producer waits a random time interval, creates a new TCP packet, set a sequence number and writes that to each binded channel. See listing \ref{lst:tcpheaderproducer}.
+
+\begin{lstlisting}[style=customc++, caption=Implementation of TCP producer.,
+label={lst:tcpheaderproducer}]
+SC_MODULE(producer){
+	sc_port<sc_fifo_out_if<TCPHeader*>,0> out;
+	int min = 2;
+	int max = 10;
+	int counter = 0;
+
+	void producer_thread(void) {
+		while(true) {
+			int random = rand() % min+max;
+			wait(random,SC_MS);
+			TCPHeader* newpacket = new TCPHeader();
+			counter++;
+			newpacket->SequenceNumber = counter;
+
+			for(int i = 0; i < out.size(); i++) {
+				out[i]->write(newpacket);
+			}
+		}
+	}
+SC_CTOR (producer) {
+	SC_THREAD(producer_thread)
+}
+};
+\end{lstlisting}
+
+\noindent The consumer receives the TCP packets in a thread and prints out the time stamp and the sequence number. Note the \textit{object} variable is a pointer to a \textit{TCPHeader} type, hence the arrow notation to dereference it. See listing \ref{lst:tcpheaderconsumer}.
+
+\begin{lstlisting}[style=customc++, caption=Implementation of TCP consumer.,
+label={lst:tcpheaderconsumer}]
+SC_MODULE(consumer){
+	sc_fifo_in<TCPHeader*> in;
+
+	void consumer_thread(void) {
+	while(true) {
+		TCPHeader* object = in->read();
+		std::cout << "Timestamp: " << sc_time_stamp() <<
+		" - Seq: " << object->SequenceNumber <<
+		" " << name() << std::endl;
+		}
+	}
+SC_CTOR (consumer) {
+	SC_THREAD(consumer_thread)
+}
+};
+\end{lstlisting}
