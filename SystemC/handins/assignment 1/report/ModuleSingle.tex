@@ -1,3 +1,45 @@
 \section{Exercise 3.1 - ModuleSingle}
 
-This is the module single 3.1. Bla bla.
+We implemented the application with a main.cpp and a ModuleSingle.h file, containing the headers and the implementation code. The main.cpp starts the simulation by instantiating the Single class and calling \textit{sc\_start()} running for 200$MS$. This is shown in listing \ref{lst:modulesinglemain}
+
+\begin{lstlisting}[style=customc++, caption=Application file for ModuleSingle,
+label={lst:modulesinglemain}]
+#include <iostream>
+using namespace std;
+#include ""
+#include "ModuleSingle.h"
+int sc_main(int argc, char* argv[]) {
+	Single ModuleSingle("my_instance 1");
+	sc_start(200,SC_MS);
+	return 0;
+}
+\end{lstlisting}
+
+\noindent The ModuleSingle defines the Single module functionality that performs the exercise task. It contains a single thread \textit{my\_thread\_process} and a single method \textit{my\_method}. The method is static sensitive to the event \textit{my\_event}. Inside the method is simply a counter that increments a \textit{sc\_uint<4>} variable when invoked and outputs the value using cout. The thread executes in a while-loop that notifies the method every 2$MS$ by calling the event \textit{my\_event}. The counter variable is just 4 bits, so it resets when it wraps around (16 or higher). The code for ModuleSingle.h is shown in listing \ref{lst:modulesingleheader}.
+
+\begin{lstlisting}[style=customc++, caption=Implementation of ModuleSingle,
+label={lst:modulesingleheader}]
+#include <systemc.h>
+SC_MODULE(Single) {
+	sc_event my_event;
+	sc_uint<4> counter;
+	void my_thread_process(void) {
+		while(true) {
+			my_event.notify();
+			wait(2,SC_MS);
+		}
+	}
+	void my_method(void) {
+		counter++;
+		std::cout << "counter: " << counter << "
+		- Timestamp: " << sc_time_stamp() << std::endl;
+	}
+	
+	SC_CTOR (Single) {
+		counter = 0;
+		SC_THREAD(my_thread_process)
+			sensitive << my_event;
+		SC_METHOD(my_method)
+			sensitive << my_event;
+	} };
+\end{lstlisting}
