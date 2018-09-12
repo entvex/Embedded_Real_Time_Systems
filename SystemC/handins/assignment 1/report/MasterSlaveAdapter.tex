@@ -1,16 +1,15 @@
 \section{Exercise 3.5 - Master and slave with adapter}
 
-In this exercise we move from the TCL modeling layer to BCAM by implementing a adapter between the master and slave (source and sink) from the previous exercise. The source simply puts data on a FIFO queue, then the adapter is responsible for handling and converting the data to the bus cycle accurate interface on the receiving sink. Figure X exhibits the setup.
+In this exercise we move from the TCL modeling layer to BCAM by implementing a adapter between the master and slave (source and sink) from the previous exercise. The source simply puts data on a FIFO queue, then the adapter is responsible for handling and converting the data to the bus cycle accurate interface on the receiving sink. Figure \ref{fig:masterslaveadapter} exhibits the setup.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{MasterSlaveAdapter.png}
-	\caption{BCAM model with an adapter in the middle.}
+	\caption{BCAM model with an adapter between the master and slave.}
 	\label{fig:masterslaveadapter}
 \end{figure}
-
-The application file creates instances of the master, slave and the input adapter. We set an appropriate clock, create signals that mimic the ones used in 3.4 and then wire everything together. We introduce a reset and a clock for the adapter to use. It waits for a positive rising edge to sample and write data to the sink. Listing \ref{lst:masterslaveadaptermain} shows the application file.
-
+\newpage
+\noindent The application file creates instances of the master, slave and the input adapter. We set an appropriate clock, create signals that mimic the ones used in 3.4 and then wire everything together. We introduce a reset and a clock for the adapter to use. It waits for a positive rising edge to sample and write data to the sink. Listing \ref{lst:masterslaveadaptermain} shows the application file.
 \begin{lstlisting}[style=customc++, caption=Application file for master/slave with an adapter.,
 label={lst:masterslaveadaptermain}]
 int sc_main(int argc, char* argv[]) {
@@ -53,8 +52,8 @@ int sc_main(int argc, char* argv[]) {
 	return 0;
 }
 \end{lstlisting}
-
-The source has become very simple, as it just pushes arbitrary data onto a FIFO queue in a thread for the adapter to receive. Listing \ref{lst:masterslaveadaptersource} shows the source.
+\newpage
+\noindent The source has now become very simple, as it just pushes arbitrary data onto a FIFO queue in a thread for the adapter to receive. Listing \ref{lst:masterslaveadaptersource} shows the source.
 
 \begin{lstlisting}[style=customc++, caption=Source module that generates data.,
 label={lst:masterslaveadaptersource}]
@@ -72,17 +71,15 @@ SC_MODULE(Source){
 	}
 };
 \end{lstlisting}
+\newpage
+\noindent The adapter is implemented as a template C++ class that inherits the \textit{sc\_fifo\_out\_if} of some type $T$ and \textit{sc\_module} class making it a \textit{SC\_MODULE}. The point of interest is the inherited \textit{write()} method that accepts any type $T$ scalar and convert it to a BCAM model by putting data on specific channels to the sink when it receives the ready signal. Also the reset signal must not have been set. Listing \ref{lst:masterslaveadapter} shows the adapter.
 
-The adapter is implemented as a template C++ class that inherits the \textit{sc\_fifo\_out\_if} of some type $T$ and \textit{sc\_module} class making it a \textit{SC\_MODULE}. The point of interest is the inherited \textit{write()} method that accepts any type $T$ scalar and convert it to a BCAM model by putting data on specific channels to the sink when it receives the ready signal. Also the reset signal must not have been set. 
-
-\ref{lst:masterslaveadapter}
-\begin{lstlisting}[style=customc++, caption=Adapter..,
+\begin{lstlisting}[style=customc++, caption=Adapter that receives FIFO data and converts it.,
 label={lst:masterslaveadapter}]
 	
 	template <class T>
 	class InAdapter: public sc_fifo_out_if <T>, public sc_module
 	{
-		public:
 		// Clock and reset
 		sc_in_clk clock; // Clock
 		sc_in<sc_logic> reset; // Reset
@@ -100,10 +97,10 @@ label={lst:masterslaveadapter}]
 		{
 			if (reset == SC_LOGIC_0)
 			{
-				// Output sample data on negative edge of clock
-				while (ready == SC_LOGIC_0)	{
-					wait(clock.posedge_event());
-				}
+			// Output sample data on negative edge of clock
+			while (ready == SC_LOGIC_0)	{
+				wait(clock.posedge_event());
+			}
 			wait(clock.posedge_event());
 			data.write(value);
 			channel.write(0); // Channel number
@@ -122,31 +119,70 @@ label={lst:masterslaveadapter}]
 	};
 \end{lstlisting}
 
-%TODO: Put in rest of code and results.
+\noindent The sink is similar to the one in 3.4. It is shown in listing \ref{lst:masterslaveadaptersink}. We used the SystemC boolean data type \textit{SC\_LOGIC} in this exercise rather than the default C++ one.
 
+\begin{lstlisting}[style=customc++, caption=Sink that receives data.,
+label={lst:masterslaveadaptersink}]
+SC_MODULE(DataSink){
 
+	ofstream myfile;
 
+	sc_out<sc_logic> ready;
+	sc_in_clk clk;
 
+	sc_in<sc_logic> valid;
+	sc_in< sc_uint<DATA_BITS> > data;
+	sc_in< sc_uint<ERROR_BITS> > error;
+	sc_in< sc_uint<CHANNEL_BITS> > channel;
 
+	sc_trace_file * tf;
 
+	void sink_method(void) {
+		if(valid.read() == SC_LOGIC_1){
+			int data = this->data.read();
+			int error = this->error.read();
+			int channel = this->channel.read();
 
+			ready.write(SC_LOGIC_0);
+			
+			... // Output data to cout and text file.
+		} else {
+			ready.write(SC_LOGIC_1);
+		}
+	}
 
+	SC_CTOR (DataSink) {
+		SC_METHOD(sink_method)
+		sensitive << clk;
+		dont_initialize();
 
+		tf = sc_create_vcd_trace_file("Waveform");
+		... // Set signal traces
+		myfile.open ("data.txt");
+	}
 
+	~DataSink(){
+		sc_close_vcd_trace_file(tf);
+		myfile.close();
+	}
+};
+\end{lstlisting}
+\newpage
+\noindent Listing \ref{lst:sinkadapteroutput} shows the output at the sink and figure \ref{fig:gtkwavesignalstateadapter} shows the GTKWaveViewer diagram of the signal states.
 
+\begin{lstlisting}[caption=Output at the sink., frame=single, captionpos=b, label={lst:sinkadapteroutput}]
+Data: 17767
+Data: 17767
+Data: 9158
+Data: 9158
+Data: 39017
+Data: 39017
+Data: 18547
+\end{lstlisting}
 
-
-
-
-s
-
-
-
-
-
-
-
-
-
-
-
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{MasterSlaveSTGTKWaveAdapter.png}
+	\caption{The signal state monitored in GTKWaveViewer.}
+	\label{fig:gtkwavesignalstateadapter}
+\end{figure}

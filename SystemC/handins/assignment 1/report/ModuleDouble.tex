@@ -9,11 +9,10 @@ For ModuleDouble, the application now includes two threads, one method and four 
 	\label{fig:moduledouble}
 \end{figure}
 
-The application file contains the main.cpp which instantiates ModuleDouble and starts the simulation as shown in listing \ref{lst:moduledoublemain}.
+\noindent The application file contains the main.cpp which instantiates ModuleDouble and starts the simulation as shown in listing \ref{lst:moduledoublemain}.
 
-\begin{lstlisting}[style=customc++, caption=Application file for ModuleDouble,
+\begin{lstlisting}[style=customc++, caption=Application file for ModuleDouble.,
 label={lst:moduledoublemain}]
-#include "ModuleDouble.h"
 int sc_main(int argc, char* argv[]) {
 	moduleDouble my_module("moduleDouble");
 	sc_start(2000,SC_MS);
@@ -21,9 +20,9 @@ return 0;
 }
 \end{lstlisting}
 
-The logic is implemented in the ModuleDouble.h file. Firstly, we define the four events that are used to trigger the threads and methods as shown in the architecture. We then introduce a boolean event\_tracker variable to enable the method A to alternate between waiting on event A and B. The two threads A and B notifies event A and B respectively and waits for an acknowledgment from the method by calling the \textit{wait()} method. This suspends the thread and waits for the sensitive list event to occur (event Aack and Back respectively). The method alternates between the two events, prints the current time and which event it has received before notifying the acknowledge event and waits for the opposite thread than the one being acknowledged to invoke it again using the \textit{next\_trigger()} method. The code for ModuleDouble.h is shown in listing \ref{lst:moduledoubleheader}. Note that the \textit{dont\_initialize()} method in the constructor prohibits the threads from being executed before the event occur.
+\noindent The functionality is implemented in the ModuleDouble.h file. Firstly, we define the four events that are used to trigger the threads and methods as shown in the architecture. We then introduce a boolean event\_tracker variable to enable the method A to alternate between waiting on event A and B. The two threads A and B notifies event A and B respectively and waits for an acknowledgment from the method by calling the \textit{wait()} method. This suspends the thread and waits for the sensitive list event to occur (event Aack and Back respectively). The method alternates between the two events, prints the current time and which event it has received before notifying the acknowledge event and waits for the opposite thread than the one being acknowledged to invoke it again using the \textit{next\_trigger()} method. The code for ModuleDouble.h is shown in listing \ref{lst:moduledoubleheader}. Note that the \textit{dont\_initialize()} method in the constructor prohibits the threads from being executed before the event occur.
 
-\begin{lstlisting}[style=customc++, caption=Implementation of ModuleDouble,
+\begin{lstlisting}[style=customc++, caption=Implementation of ModuleDouble.,
 label={lst:moduledoubleheader}]
 SC_MODULE(moduleDouble){
 

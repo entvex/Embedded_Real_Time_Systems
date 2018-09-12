@@ -4,10 +4,6 @@ We implemented the application with a main.cpp and a ModuleSingle.h file, contai
 
 \begin{lstlisting}[style=customc++, caption=Application file for ModuleSingle,
 label={lst:modulesinglemain}]
-#include <iostream>
-using namespace std;
-#include ""
-#include "ModuleSingle.h"
 int sc_main(int argc, char* argv[]) {
 	Single ModuleSingle("my_instance 1");
 	sc_start(200,SC_MS);
@@ -19,7 +15,6 @@ int sc_main(int argc, char* argv[]) {
 
 \begin{lstlisting}[style=customc++, caption=Implementation of ModuleSingle,
 label={lst:modulesingleheader}]
-#include <systemc.h>
 SC_MODULE(Single) {
 	sc_event my_event;
 	sc_uint<4> counter;

@@ -4,7 +4,7 @@ In this exercise we create a cycle accurate communication model that uses the Av
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{MasterSlaveST.png}
+	\includegraphics[width=0.8\linewidth]{MasterSlaveST.png}
 	\caption{Architecture of the data source and sink.}
 	\label{fig:masterslave}
 \end{figure}
@@ -15,13 +15,11 @@ In this exercise we create a cycle accurate communication model that uses the Av
 label={lst:masterslavestmain}]
 int sc_main(int argc, char* argv[]) {
 	
-	Source Master("Master");
-	DataSink Slave("Slave");
+	Source Master("Master"); DataSink Slave("Slave");
 	
 	sc_clock clock("clock", sc_time(CLK_PERIODE, SC_NS) ); // 50 MHz
 	
-	sc_signal<bool> ready_channel("C1");
-	sc_signal<bool> valid_channel("C2") ;
+	sc_signal<bool> ready_channel("C1"), valid_channel("C2") ;
 	
 	sc_signal<sc_uint<DATA_BITS> >  data_channel("C3");
 	sc_signal<sc_uint<ERROR_BITS> > error_channel("C4");
@@ -33,19 +31,15 @@ int sc_main(int argc, char* argv[]) {
 	Master.error(error_channel);
 	Master.channel(channel_channel);
 	Master.clk(clock);
-	
 	Slave.valid(valid_channel);
 	Slave.data(data_channel);
 	Slave.ready(ready_channel);
 	Slave.error(error_channel);
 	Slave.channel(channel_channel);
 	Slave.clk(clock);
-	
-	sc_start(2000,SC_NS);
-	return 0;
-}
+	sc_start(2000,SC_NS); return 0; }
 \end{lstlisting}
-
+\newpage
 \noindent Listing \ref{lst:masterslavestsource} shows the implementation of the source. The outgoing channels are modeled with the \textit{sc\_out} class and ingoing with \textit{sc\_in}. The constructor declares a \textit{source\_method()} sensitive to the  clock configured in the application file. The method detects the ready signal from the sink and then writes a arbitrary number to the data channel, a random error code and a channel bit. Finally it sets the valid channel to true, letting the sink know data is ready.
 
 \begin{lstlisting}[style=customc++, caption=Implementation of the data source.,
@@ -78,7 +72,7 @@ SC_CTOR (Source) {
 	}
 };
 \end{lstlisting}
-
+\newpage
 \noindent Listing \ref{lst:masterslavestsink} details the sink. Data is received when valid is signaled, stored and written to an external text file. The global clock invokes the \textit{sink\_method()} method. The text file and the waveform file are opened in the constructor and closed in the destructor. 
 
 \begin{lstlisting}[style=customc++, caption=Implementation of the data sink.,
@@ -126,10 +120,10 @@ SC_CTOR (DataSink) {
 	}
 };
 \end{lstlisting}
-
+\newpage
 \noindent Listing \ref{lst:sinkoutput} shows a small snippet from the text file with data entries and figure \ref{fig:gtkwavesignalstate} displays the signal states when the first data transfer occurs from the source at time 10$NS$. It starts when the clock goes low. The data value is 4567, and the valid signal is set accordingly.
 
-\begin{lstlisting}[caption=Output at the sink., frame=single, captionpos=b label={lst:sinkoutput}]
+\begin{lstlisting}[caption=Output at the sink., frame=single, captionpos=b, label={lst:sinkoutput}]
 Data: 17767
 Data: 18547
 Data: 37962
@@ -138,7 +132,7 @@ Data: 16882
 Data: 57670
 \end{lstlisting}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{MasterSlaveSTGTKWave.png}
 	\caption{The signal state monitored in GTKWaveViewer.}
