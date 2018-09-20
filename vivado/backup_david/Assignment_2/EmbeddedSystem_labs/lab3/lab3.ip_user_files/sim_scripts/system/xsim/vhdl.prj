@@ -1,0 +1,9 @@
+vhdl xil_defaultlib "../../../bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/system/ip/system_rst_processing_system7_0_50M_0/sim/system_rst_processing_system7_0_50M_0.vhd" 
+vhdl xil_defaultlib "../../../bd/system/ip/system_axi_gpio_0_1/sim/system_axi_gpio_0_1.vhd" 
+vhdl xil_defaultlib "../../../bd/system/ipshared/b329/hdl/led_ip_v1_0_S_AXI.vhd" 
+vhdl xil_defaultlib "../../../bd/system/ipshared/b329/hdl/led_ip_v1_0.vhd" 
+vhdl xil_defaultlib "../../../bd/system/ip/system_led_ip_0_0/sim/system_led_ip_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/system/hdl/system.vhd" 
+vhdl xil_defaultlib "../../../bd/system/ip/system_axi_bram_ctrl_0_0/sim/system_axi_bram_ctrl_0_0.vhd" 
+nosort
