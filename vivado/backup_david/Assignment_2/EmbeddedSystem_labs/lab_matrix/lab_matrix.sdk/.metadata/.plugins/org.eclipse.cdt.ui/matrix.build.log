@@ -1,0 +1,34 @@
+11:05:26 **** Auto Build of configuration Debug for project matrix ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/lab4.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c: In function 'main':
+../src/lab4.c:16:8: warning: unused variable 'timer_state' [-Wunused-variable]
+    int timer_state = 0;
+        ^~~~~~~~~~~
+../src/lab4.c:15:15: warning: variable 'skip' set but not used [-Wunused-but-set-variable]
+    int value, skip, Status;
+               ^~~~
+At top level:
+../src/lab4.c:102:9: warning: 'multiMatrixHard' defined but not used [-Wunused-function]
+    void multiMatrixHard(VectorArray A,VectorArray B, VectorArray P) {
+         ^~~~~~~~~~~~~~~
+'Finished building: ../src/lab4.c'
+' '
+'Building target: matrix.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_bsp/ps7_cortexa9_0/lib -o "matrix.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix.elf  |tee "matrix.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25956	   1196	  22584	  49736	   c248	matrix.elf
+'Finished building: matrix.elf.size'
+' '
+
+11:05:28 Build Finished (took 1s.614ms)
+

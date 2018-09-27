@@ -12,7 +12,9 @@ src/lab4.o src/lab4.o: ../src/lab4.c \
  ../../lab4_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
  ../../lab4_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../../lab4_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
- ../../lab4_bsp/ps7_cortexa9_0/include/led_ip.h
+ ../../lab4_bsp/ps7_cortexa9_0/include/led_ip.h \
+ ../../lab4_bsp/ps7_cortexa9_0/include/xscutimer.h \
+ ../../lab4_bsp/ps7_cortexa9_0/include/xscutimer_hw.h
 
 ../../lab4_bsp/ps7_cortexa9_0/include/xparameters.h:
 
@@ -41,3 +43,7 @@ src/lab4.o src/lab4.o: ../src/lab4.c \
 ../../lab4_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h:
 
 ../../lab4_bsp/ps7_cortexa9_0/include/led_ip.h:
+
+../../lab4_bsp/ps7_cortexa9_0/include/xscutimer.h:
+
+../../lab4_bsp/ps7_cortexa9_0/include/xscutimer_hw.h:

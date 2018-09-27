@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Sep 25 11:36:09 2018
+# Process ID: 11988
+# Current directory: D:/Xilinx/Assignment_2/HLS_labs/lab4/fir.prj/solution1/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/fir/xsim_script.tcl}
+# Log file: D:/Xilinx/Assignment_2/HLS_labs/lab4/fir.prj/solution1/sim/vhdl/xsim.log
+# Journal file: D:/Xilinx/Assignment_2/HLS_labs/lab4/fir.prj/solution1/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/fir/xsim_script.tcl
+# xsim {fir} -autoloadwcfg -tclbatch {fir.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source fir.tcl
+## run all
+Note: simulation done!
+Time: 43015 ns  Iteration: 1  Process: /apatb_fir_top/generate_sim_done_proc  File: D:/Xilinx/Assignment_2/HLS_labs/lab4/fir.prj/solution1/sim/vhdl/fir.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 43015 ns  Iteration: 1  Process: /apatb_fir_top/generate_sim_done_proc  File: D:/Xilinx/Assignment_2/HLS_labs/lab4/fir.prj/solution1/sim/vhdl/fir.autotb.vhd
+$finish called at time : 43015 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Sep 25 11:36:22 2018...

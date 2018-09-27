@@ -1,0 +1,48 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_eq_top -prj eq.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s eq 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/AESL_axi_slave_eqio.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_eqio
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/eq.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_eq_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/eq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/eq_coeff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eq_coeff_ram
+INFO: [VRFC 10-311] analyzing module eq_coeff
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/eq_eqio_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eq_eqio_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/eq_mul_16s_32s_32_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eq_mul_16s_32s_32_2_MulnS_0
+INFO: [VRFC 10-311] analyzing module eq_mul_16s_32s_32_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/eq_mul_17s_32s_32_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eq_mul_17s_32s_32_2_MulnS_1
+INFO: [VRFC 10-311] analyzing module eq_mul_17s_32s_32_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/eq_x1_fix.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eq_x1_fix_ram
+INFO: [VRFC 10-311] analyzing module eq_x1_fix
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1/sim/verilog/eq_y1_fix.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eq_y1_fix_ram
+INFO: [VRFC 10-311] analyzing module eq_y1_fix
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.eq_coeff_ram
+Compiling module xil_defaultlib.eq_coeff(DataWidth=32,AddressRan...
+Compiling module xil_defaultlib.eq_x1_fix_ram
+Compiling module xil_defaultlib.eq_x1_fix(DataWidth=16,AddressRa...
+Compiling module xil_defaultlib.eq_y1_fix_ram
+Compiling module xil_defaultlib.eq_y1_fix(DataWidth=17,AddressRa...
+Compiling module xil_defaultlib.eq_eqio_s_axi(C_S_AXI_ADDR_WIDTH...
+Compiling module xil_defaultlib.eq_mul_16s_32s_32_2_MulnS_0
+Compiling module xil_defaultlib.eq_mul_16s_32s_32_2(ID=1,NUM_STA...
+Compiling module xil_defaultlib.eq_mul_17s_32s_32_2_MulnS_1
+Compiling module xil_defaultlib.eq_mul_17s_32s_32_2(ID=1,NUM_STA...
+Compiling module xil_defaultlib.eq
+Compiling module xil_defaultlib.AESL_axi_slave_eqio
+Compiling module xil_defaultlib.apatb_eq_top
+Built simulation snapshot eq

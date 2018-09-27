@@ -1,0 +1,598 @@
+
+
+================================================================
+== Vivado HLS Report for 'eq'
+================================================================
+* Date:           Tue Sep 25 09:44:49 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        HLS
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.91|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|   51|    4|   52|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loop    |   49|   49|         7|          -|          -|     7|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 11
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	9  / (tmp_s)
+	2  / (!tmp_s)
+2 --> 
+	3  / (!exitcond)
+	11  / (exitcond)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	2  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+* FSM state operations: 
+
+ <State 1>: 6.64ns
+ST_1: StgValue_12 (14)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i32 %b0) nounwind, !map !9
+
+ST_1: StgValue_13 (15)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 %b1) nounwind, !map !15
+
+ST_1: StgValue_14 (16)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 %b2) nounwind, !map !19
+
+ST_1: StgValue_15 (17)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i32 %a1) nounwind, !map !23
+
+ST_1: StgValue_16 (18)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i32 %a2) nounwind, !map !27
+
+ST_1: StgValue_17 (19)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i16 %band) nounwind, !map !31
+
+ST_1: StgValue_18 (20)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i16 %sampleIn) nounwind, !map !35
+
+ST_1: StgValue_19 (21)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i16* %sampleOut) nounwind, !map !39
+
+ST_1: StgValue_20 (22)  [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecTopModule([3 x i8]* @eq_str) nounwind
+
+ST_1: sampleIn_read (23)  [1/1] 1.00ns
+:9  %sampleIn_read = call i16 @_ssdm_op_Read.s_axilite.i16(i16 %sampleIn) nounwind
+
+ST_1: band_read (24)  [1/1] 1.00ns
+:10  %band_read = call i16 @_ssdm_op_Read.s_axilite.i16(i16 %band) nounwind
+
+ST_1: a2_read (25)  [1/1] 1.00ns
+:11  %a2_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %a2) nounwind
+
+ST_1: a1_read (26)  [1/1] 1.00ns
+:12  %a1_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %a1) nounwind
+
+ST_1: b2_read (27)  [1/1] 1.00ns
+:13  %b2_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %b2) nounwind
+
+ST_1: b1_read (28)  [1/1] 1.00ns
+:14  %b1_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %b1) nounwind
+
+ST_1: b0_read (29)  [1/1] 1.00ns
+:15  %b0_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %b0) nounwind
+
+ST_1: StgValue_28 (30)  [1/1] 0.00ns  loc: EQ.c:32
+:16  call void (...)* @_ssdm_op_SpecInterface(i32 %b0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_29 (31)  [1/1] 0.00ns  loc: EQ.c:32
+:17  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_30 (32)  [1/1] 0.00ns  loc: EQ.c:32
+:18  call void (...)* @_ssdm_op_SpecInterface(i32 %b1, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_31 (33)  [1/1] 0.00ns  loc: EQ.c:32
+:19  call void (...)* @_ssdm_op_SpecInterface(i32 %b2, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_32 (34)  [1/1] 0.00ns  loc: EQ.c:32
+:20  call void (...)* @_ssdm_op_SpecInterface(i32 %a1, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_33 (35)  [1/1] 0.00ns  loc: EQ.c:32
+:21  call void (...)* @_ssdm_op_SpecInterface(i32 %a2, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_34 (36)  [1/1] 0.00ns  loc: EQ.c:32
+:22  call void (...)* @_ssdm_op_SpecInterface(i16 %band, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_35 (37)  [1/1] 0.00ns  loc: EQ.c:32
+:23  call void (...)* @_ssdm_op_SpecInterface(i16 %sampleIn, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_36 (38)  [1/1] 0.00ns  loc: EQ.c:32
+:24  call void (...)* @_ssdm_op_SpecInterface(i16* %sampleOut, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [5 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: tmp_s (39)  [1/1] 3.03ns  loc: EQ.c:38
+:25  %tmp_s = icmp slt i16 %band_read, 7
+
+ST_1: StgValue_38 (40)  [1/1] 0.00ns  loc: EQ.c:38
+:26  br i1 %tmp_s, label %1, label %.preheader.preheader
+
+ST_1: StgValue_39 (42)  [1/1] 1.59ns  loc: EQ.c:49
+.preheader.preheader:0  br label %.preheader
+
+ST_1: tmp_13 (108)  [1/1] 0.00ns  loc: EQ.c:40 (grouped into LUT with out node i)
+:0  %tmp_13 = shl i16 %band_read, 2
+
+ST_1: i (109)  [1/1] 2.39ns  loc: EQ.c:40 (out node of the LUT)
+:1  %i = add i16 %band_read, %tmp_13
+
+ST_1: tmp_1 (111)  [1/1] 0.00ns  loc: EQ.c:41
+:3  %tmp_1 = sext i16 %i to i32
+
+ST_1: coeff_addr (112)  [1/1] 0.00ns  loc: EQ.c:41
+:4  %coeff_addr = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_1
+
+ST_1: StgValue_44 (113)  [1/1] 3.25ns  loc: EQ.c:41
+:5  store i32 %b0_read, i32* %coeff_addr, align 4
+
+
+ <State 2>: 3.25ns
+ST_2: tmp_6 (44)  [1/1] 0.00ns
+.preheader:0  %tmp_6 = phi i16 [ %input, %2 ], [ 0, %.preheader.preheader ]
+
+ST_2: i5 (45)  [1/1] 0.00ns
+.preheader:1  %i5 = phi i6 [ %i_5, %2 ], [ 0, %.preheader.preheader ]
+
+ST_2: band_assign (46)  [1/1] 0.00ns
+.preheader:2  %band_assign = phi i3 [ %b, %2 ], [ 0, %.preheader.preheader ]
+
+ST_2: sample_assign (47)  [1/1] 0.00ns
+.preheader:3  %sample_assign = phi i16 [ %input, %2 ], [ %sampleIn_read, %.preheader.preheader ]
+
+ST_2: exitcond (48)  [1/1] 2.07ns  loc: EQ.c:49
+.preheader:4  %exitcond = icmp eq i3 %band_assign, -1
+
+ST_2: empty (49)  [1/1] 0.00ns
+.preheader:5  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 7, i64 7, i64 7) nounwind
+
+ST_2: b (50)  [1/1] 2.26ns  loc: EQ.c:54
+.preheader:6  %b = add i3 %band_assign, 1
+
+ST_2: StgValue_52 (51)  [1/1] 0.00ns  loc: EQ.c:49
+.preheader:7  br i1 %exitcond, label %.loopexit.loopexit, label %2
+
+ST_2: tmp_7 (54)  [1/1] 0.00ns  loc: EQ.c:50
+:1  %tmp_7 = zext i6 %i5 to i32
+
+ST_2: coeff_addr_5 (56)  [1/1] 0.00ns  loc: EQ.c:50
+:3  %coeff_addr_5 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_7
+
+ST_2: coeff_load (57)  [2/2] 3.25ns  loc: EQ.c:50
+:4  %coeff_load = load i32* %coeff_addr_5, align 4
+
+ST_2: StgValue_56 (106)  [1/1] 1.59ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 3>: 5.59ns
+ST_3: tmp_14 (55)  [1/1] 0.00ns  loc: EQ.c:50
+:2  %tmp_14 = trunc i6 %i5 to i5
+
+ST_3: coeff_load (57)  [1/2] 3.25ns  loc: EQ.c:50
+:4  %coeff_load = load i32* %coeff_addr_5, align 4
+
+ST_3: tmp_8 (58)  [1/1] 2.33ns  loc: EQ.c:50
+:5  %tmp_8 = add i5 1, %tmp_14
+
+ST_3: tmp_8_cast (59)  [1/1] 0.00ns  loc: EQ.c:50
+:6  %tmp_8_cast = zext i5 %tmp_8 to i32
+
+ST_3: coeff_addr_6 (60)  [1/1] 0.00ns  loc: EQ.c:50
+:7  %coeff_addr_6 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_8_cast
+
+ST_3: coeff_load_1 (61)  [2/2] 3.25ns  loc: EQ.c:50
+:8  %coeff_load_1 = load i32* %coeff_addr_6, align 4
+
+ST_3: tmp_9 (62)  [1/1] 2.31ns  loc: EQ.c:50
+:9  %tmp_9 = add i6 2, %i5
+
+ST_3: tmp_9_cast (63)  [1/1] 0.00ns  loc: EQ.c:50
+:10  %tmp_9_cast = zext i6 %tmp_9 to i32
+
+ST_3: coeff_addr_7 (64)  [1/1] 0.00ns  loc: EQ.c:50
+:11  %coeff_addr_7 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_9_cast
+
+ST_3: coeff_load_2 (65)  [2/2] 3.25ns  loc: EQ.c:50
+:12  %coeff_load_2 = load i32* %coeff_addr_7, align 4
+
+ST_3: tmp_1_i (76)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:23  %tmp_1_i = zext i3 %band_assign to i32
+
+ST_3: x1_fix_addr (77)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:24  %x1_fix_addr = getelementptr [7 x i16]* @x1_fix, i32 0, i32 %tmp_1_i
+
+ST_3: x1_fix_load (78)  [2/2] 2.32ns  loc: EQ.c:13->EQ.c:50
+:25  %x1_fix_load = load i16* %x1_fix_addr, align 2
+
+ST_3: x2_fix_addr (81)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:28  %x2_fix_addr = getelementptr [7 x i16]* @x2_fix, i32 0, i32 %tmp_1_i
+
+ST_3: x2_fix_load (82)  [2/2] 2.32ns  loc: EQ.c:13->EQ.c:50
+:29  %x2_fix_load = load i16* %x2_fix_addr, align 2
+
+ST_3: y1_fix_addr (85)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:32  %y1_fix_addr = getelementptr [7 x i17]* @y1_fix, i32 0, i32 %tmp_1_i
+
+ST_3: y2_fix_addr (89)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:36  %y2_fix_addr = getelementptr [7 x i17]* @y2_fix, i32 0, i32 %tmp_1_i
+
+
+ <State 4>: 6.91ns
+ST_4: coeff_load_1 (61)  [1/2] 3.25ns  loc: EQ.c:50
+:8  %coeff_load_1 = load i32* %coeff_addr_6, align 4
+
+ST_4: coeff_load_2 (65)  [1/2] 3.25ns  loc: EQ.c:50
+:12  %coeff_load_2 = load i32* %coeff_addr_7, align 4
+
+ST_4: tmp_10 (66)  [1/1] 2.31ns  loc: EQ.c:50
+:13  %tmp_10 = add i6 3, %i5
+
+ST_4: tmp_10_cast (67)  [1/1] 0.00ns  loc: EQ.c:50
+:14  %tmp_10_cast = zext i6 %tmp_10 to i32
+
+ST_4: coeff_addr_8 (68)  [1/1] 0.00ns  loc: EQ.c:50
+:15  %coeff_addr_8 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_10_cast
+
+ST_4: coeff_load_3 (69)  [2/2] 3.25ns  loc: EQ.c:50
+:16  %coeff_load_3 = load i32* %coeff_addr_8, align 4
+
+ST_4: tmp_11 (70)  [1/1] 2.31ns  loc: EQ.c:50
+:17  %tmp_11 = add i6 4, %i5
+
+ST_4: tmp_11_cast (71)  [1/1] 0.00ns  loc: EQ.c:50
+:18  %tmp_11_cast = zext i6 %tmp_11 to i32
+
+ST_4: coeff_addr_9 (72)  [1/1] 0.00ns  loc: EQ.c:50
+:19  %coeff_addr_9 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_11_cast
+
+ST_4: coeff_load_4 (73)  [2/2] 3.25ns  loc: EQ.c:50
+:20  %coeff_load_4 = load i32* %coeff_addr_9, align 4
+
+ST_4: in (74)  [1/1] 0.00ns  loc: EQ.c:8->EQ.c:50
+:21  %in = sext i16 %sample_assign to i32
+
+ST_4: tmp_i (75)  [2/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:22  %tmp_i = mul nsw i32 %in, %coeff_load
+
+ST_4: x1_fix_load (78)  [1/2] 2.32ns  loc: EQ.c:13->EQ.c:50
+:25  %x1_fix_load = load i16* %x1_fix_addr, align 2
+
+ST_4: x2_fix_load (82)  [1/2] 2.32ns  loc: EQ.c:13->EQ.c:50
+:29  %x2_fix_load = load i16* %x2_fix_addr, align 2
+
+ST_4: y1_fix_load (86)  [2/2] 2.32ns  loc: EQ.c:13->EQ.c:50
+:33  %y1_fix_load = load i17* %y1_fix_addr, align 4
+
+ST_4: y2_fix_load (90)  [2/2] 2.32ns  loc: EQ.c:13->EQ.c:50
+:37  %y2_fix_load = load i17* %y2_fix_addr, align 4
+
+ST_4: StgValue_90 (98)  [1/1] 2.32ns  loc: EQ.c:18->EQ.c:50
+:45  store i16 %x1_fix_load, i16* %x2_fix_addr, align 2
+
+ST_4: StgValue_91 (99)  [1/1] 2.32ns  loc: EQ.c:19->EQ.c:50
+:46  store i16 %sample_assign, i16* %x1_fix_addr, align 2
+
+ST_4: i_5 (103)  [1/1] 2.31ns  loc: EQ.c:49
+:50  %i_5 = add i6 5, %i5
+
+
+ <State 5>: 6.91ns
+ST_5: coeff_load_3 (69)  [1/2] 3.25ns  loc: EQ.c:50
+:16  %coeff_load_3 = load i32* %coeff_addr_8, align 4
+
+ST_5: coeff_load_4 (73)  [1/2] 3.25ns  loc: EQ.c:50
+:20  %coeff_load_4 = load i32* %coeff_addr_9, align 4
+
+ST_5: tmp_i (75)  [1/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:22  %tmp_i = mul nsw i32 %in, %coeff_load
+
+ST_5: extLd (79)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:26  %extLd = sext i16 %x1_fix_load to i32
+
+ST_5: tmp_2_i (80)  [2/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:27  %tmp_2_i = mul nsw i32 %extLd, %coeff_load_1
+
+ST_5: extLd1 (83)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:30  %extLd1 = sext i16 %x2_fix_load to i32
+
+ST_5: tmp_3_i (84)  [2/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:31  %tmp_3_i = mul nsw i32 %extLd1, %coeff_load_2
+
+ST_5: y1_fix_load (86)  [1/2] 2.32ns  loc: EQ.c:13->EQ.c:50
+:33  %y1_fix_load = load i17* %y1_fix_addr, align 4
+
+ST_5: y2_fix_load (90)  [1/2] 2.32ns  loc: EQ.c:13->EQ.c:50
+:37  %y2_fix_load = load i17* %y2_fix_addr, align 4
+
+ST_5: StgValue_102 (100)  [1/1] 2.32ns  loc: EQ.c:20->EQ.c:50
+:47  store i17 %y1_fix_load, i17* %y2_fix_addr, align 4
+
+
+ <State 6>: 6.91ns
+ST_6: tmp_2_i (80)  [1/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:27  %tmp_2_i = mul nsw i32 %extLd, %coeff_load_1
+
+ST_6: tmp_3_i (84)  [1/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:31  %tmp_3_i = mul nsw i32 %extLd1, %coeff_load_2
+
+ST_6: extLd7 (87)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:34  %extLd7 = sext i17 %y1_fix_load to i32
+
+ST_6: tmp_4_i (88)  [2/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:35  %tmp_4_i = mul nsw i32 %extLd7, %coeff_load_3
+
+ST_6: extLd2 (91)  [1/1] 0.00ns  loc: EQ.c:13->EQ.c:50
+:38  %extLd2 = sext i17 %y2_fix_load to i32
+
+ST_6: tmp_5_i (92)  [2/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:39  %tmp_5_i = mul nsw i32 %extLd2, %coeff_load_4
+
+
+ <State 7>: 6.91ns
+ST_7: tmp_4_i (88)  [1/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:35  %tmp_4_i = mul nsw i32 %extLd7, %coeff_load_3
+
+ST_7: tmp_5_i (92)  [1/2] 6.91ns  loc: EQ.c:13->EQ.c:50
+:39  %tmp_5_i = mul nsw i32 %extLd2, %coeff_load_4
+
+ST_7: tmp (93)  [1/1] 2.19ns  loc: EQ.c:13->EQ.c:50
+:40  %tmp = add i32 %tmp_3_i, %tmp_i
+
+ST_7: tmp_7_i (94)  [1/1] 2.19ns  loc: EQ.c:13->EQ.c:50
+:41  %tmp_7_i = add i32 %tmp_2_i, %tmp
+
+
+ <State 8>: 6.69ns
+ST_8: StgValue_113 (53)  [1/1] 0.00ns  loc: EQ.c:49
+:0  call void (...)* @_ssdm_op_SpecLoopName([5 x i8]* @p_str3) nounwind
+
+ST_8: tmp_8_i (95)  [1/1] 2.19ns  loc: EQ.c:13->EQ.c:50
+:42  %tmp_8_i = sub i32 %tmp_7_i, %tmp_4_i
+
+ST_8: out (96)  [1/1] 2.19ns  loc: EQ.c:13->EQ.c:50
+:43  %out = sub i32 %tmp_8_i, %tmp_5_i
+
+ST_8: tmp_10_i (97)  [1/1] 0.00ns  loc: EQ.c:16->EQ.c:50
+:44  %tmp_10_i = call i17 @_ssdm_op_PartSelect.i17.i32.i32.i32(i32 %out, i32 15, i32 31)
+
+ST_8: StgValue_117 (101)  [1/1] 2.32ns  loc: EQ.c:21->EQ.c:50
+:48  store i17 %tmp_10_i, i17* %y1_fix_addr, align 4
+
+ST_8: input (102)  [1/1] 0.00ns  loc: EQ.c:23->EQ.c:50
+:49  %input = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %out, i32 15, i32 30)
+
+ST_8: StgValue_119 (104)  [1/1] 0.00ns  loc: EQ.c:49
+:51  br label %.preheader
+
+
+ <State 9>: 5.64ns
+ST_9: i_1 (110)  [1/1] 2.39ns  loc: EQ.c:41
+:2  %i_1 = add i16 1, %i
+
+ST_9: i_2 (114)  [1/1] 2.39ns  loc: EQ.c:42
+:6  %i_2 = add i16 2, %i
+
+ST_9: tmp_2 (115)  [1/1] 0.00ns  loc: EQ.c:42
+:7  %tmp_2 = sext i16 %i_1 to i32
+
+ST_9: coeff_addr_1 (116)  [1/1] 0.00ns  loc: EQ.c:42
+:8  %coeff_addr_1 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_2
+
+ST_9: StgValue_124 (117)  [1/1] 3.25ns  loc: EQ.c:42
+:9  store i32 %b1_read, i32* %coeff_addr_1, align 4
+
+ST_9: tmp_3 (119)  [1/1] 0.00ns  loc: EQ.c:43
+:11  %tmp_3 = sext i16 %i_2 to i32
+
+ST_9: coeff_addr_2 (120)  [1/1] 0.00ns  loc: EQ.c:43
+:12  %coeff_addr_2 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_3
+
+ST_9: StgValue_127 (121)  [1/1] 3.25ns  loc: EQ.c:43
+:13  store i32 %b2_read, i32* %coeff_addr_2, align 4
+
+
+ <State 10>: 5.64ns
+ST_10: i_3 (118)  [1/1] 2.39ns  loc: EQ.c:43
+:10  %i_3 = add i16 3, %i
+
+ST_10: i_4 (122)  [1/1] 2.39ns  loc: EQ.c:44
+:14  %i_4 = add i16 4, %i
+
+ST_10: tmp_4 (123)  [1/1] 0.00ns  loc: EQ.c:44
+:15  %tmp_4 = sext i16 %i_3 to i32
+
+ST_10: coeff_addr_3 (124)  [1/1] 0.00ns  loc: EQ.c:44
+:16  %coeff_addr_3 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_4
+
+ST_10: StgValue_132 (125)  [1/1] 3.25ns  loc: EQ.c:44
+:17  store i32 %a1_read, i32* %coeff_addr_3, align 4
+
+ST_10: tmp_5 (126)  [1/1] 0.00ns  loc: EQ.c:45
+:18  %tmp_5 = sext i16 %i_4 to i32
+
+ST_10: coeff_addr_4 (127)  [1/1] 0.00ns  loc: EQ.c:45
+:19  %coeff_addr_4 = getelementptr inbounds [35 x i32]* @coeff, i32 0, i32 %tmp_5
+
+ST_10: StgValue_135 (128)  [1/1] 3.25ns  loc: EQ.c:45
+:20  store i32 %a2_read, i32* %coeff_addr_4, align 4
+
+ST_10: StgValue_136 (129)  [1/1] 1.59ns  loc: EQ.c:46
+:21  br label %.loopexit
+
+
+ <State 11>: 1.00ns
+ST_11: tmp_12 (131)  [1/1] 0.00ns  loc: EQ.c:23->EQ.c:50
+.loopexit:0  %tmp_12 = phi i16 [ 0, %1 ], [ %tmp_6, %.loopexit.loopexit ]
+
+ST_11: StgValue_138 (132)  [1/1] 1.00ns  loc: EQ.c:57
+.loopexit:1  call void @_ssdm_op_Write.s_axilite.i16P(i16* %sampleOut, i16 %tmp_12) nounwind
+
+ST_11: StgValue_139 (133)  [1/1] 0.00ns  loc: EQ.c:58
+.loopexit:2  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 6.64ns
+The critical path consists of the following:
+	s_axi read on port 'band' [24]  (1 ns)
+	'add' operation ('i', EQ.c:40) [109]  (2.39 ns)
+	'getelementptr' operation ('coeff_addr', EQ.c:41) [112]  (0 ns)
+	'store' operation (EQ.c:41) of variable 'b0' on array 'coeff' [113]  (3.25 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', EQ.c:49) [45]  (0 ns)
+	'getelementptr' operation ('coeff_addr_5', EQ.c:50) [56]  (0 ns)
+	'load' operation ('b0', EQ.c:50) on array 'coeff' [57]  (3.25 ns)
+
+ <State 3>: 5.59ns
+The critical path consists of the following:
+	'add' operation ('tmp_8', EQ.c:50) [58]  (2.33 ns)
+	'getelementptr' operation ('coeff_addr_6', EQ.c:50) [60]  (0 ns)
+	'load' operation ('b1', EQ.c:50) on array 'coeff' [61]  (3.25 ns)
+
+ <State 4>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_i', EQ.c:13->EQ.c:50) [75]  (6.91 ns)
+
+ <State 5>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_i', EQ.c:13->EQ.c:50) [75]  (6.91 ns)
+
+ <State 6>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_2_i', EQ.c:13->EQ.c:50) [80]  (6.91 ns)
+
+ <State 7>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp_4_i', EQ.c:13->EQ.c:50) [88]  (6.91 ns)
+
+ <State 8>: 6.69ns
+The critical path consists of the following:
+	'sub' operation ('tmp_8_i', EQ.c:13->EQ.c:50) [95]  (2.19 ns)
+	'sub' operation ('out', EQ.c:13->EQ.c:50) [96]  (2.19 ns)
+	'store' operation (EQ.c:21->EQ.c:50) of variable 'tmp_10_i', EQ.c:16->EQ.c:50 on array 'y1_fix' [101]  (2.32 ns)
+
+ <State 9>: 5.64ns
+The critical path consists of the following:
+	'add' operation ('i', EQ.c:41) [110]  (2.39 ns)
+	'getelementptr' operation ('coeff_addr_1', EQ.c:42) [116]  (0 ns)
+	'store' operation (EQ.c:42) of variable 'b1' on array 'coeff' [117]  (3.25 ns)
+
+ <State 10>: 5.64ns
+The critical path consists of the following:
+	'add' operation ('i', EQ.c:43) [118]  (2.39 ns)
+	'getelementptr' operation ('coeff_addr_3', EQ.c:44) [124]  (0 ns)
+	'store' operation (EQ.c:44) of variable 'a1' on array 'coeff' [125]  (3.25 ns)
+
+ <State 11>: 1ns
+The critical path consists of the following:
+	'phi' operation ('tmp_12', EQ.c:23->EQ.c:50) with incoming values : ('result', EQ.c:23->EQ.c:50) [131]  (0 ns)
+	s_axi write on port 'sampleOut' (EQ.c:57) [132]  (1 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

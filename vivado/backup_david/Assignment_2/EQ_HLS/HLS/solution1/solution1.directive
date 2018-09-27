@@ -1,0 +1,68 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="sampleOut" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="sampleIn" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="band" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="a2" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="a1" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="b2" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="b1" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+        <directive functionName="eq" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="b0" positionalBoolean="4"/>
+                <option name="bundle" value="eqio"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

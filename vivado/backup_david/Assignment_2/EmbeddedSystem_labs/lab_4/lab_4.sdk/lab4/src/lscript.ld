@@ -251,7 +251,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
    . += _HEAP_SIZE;
    _heap_end = .;
    HeapLimit = .;
-} > axi_bram_ctrl_0_Mem0
+} > ps7_ram_0
 
 .stack (NOLOAD) : {
    . = ALIGN(16);
@@ -281,7 +281,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
    . += _UNDEF_STACK_SIZE;
    . = ALIGN(16);
    __undef_stack = .;
-} > axi_bram_ctrl_0_Mem0
+} > ps7_ram_0
 
 _end = .;
 }

@@ -16,7 +16,7 @@ startgroup
 set_property -dict [list CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {0}] [get_bd_cells processing_system7_0]
 endgroup
 regenerate_bd_layout
-set_property ip_repo_paths  C:/xup/hls/labs/lab4/ip_repo [current_project]
+set_property ip_repo_paths  D:/Xilinx/Assignment_2/HLS_labs/lab4/ip_repo [current_project]
 update_ip_catalog
 startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0

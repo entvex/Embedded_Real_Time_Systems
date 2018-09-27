@@ -1,0 +1,10 @@
+0.6
+2017.2
+Jun 15 2017
+18:52:51
+D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/verilog/AESL_automem_a.v,1537623839,systemVerilog,,,,AESL_automem_a,D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed,,,,,,
+D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/verilog/AESL_automem_b.v,1537623839,systemVerilog,,,,AESL_automem_b,D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed,,,,,,
+D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/verilog/AESL_automem_res.v,1537623839,systemVerilog,,,,AESL_automem_res,D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed,,,,,,
+D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/verilog/matrixmul.autotb.v,1537623839,systemVerilog,,,,apatb_matrixmul_top,D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed,,,,,,
+D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/verilog/matrixmul.v,1537622358,systemVerilog,,,,matrixmul,D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed,,,,,,
+D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/verilog/matrixmul_mac_mulbkb.v,1537622360,systemVerilog,,,,matrixmul_mac_mulbkb;matrixmul_mac_mulbkb_DSP48_0,D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed,,,,,,

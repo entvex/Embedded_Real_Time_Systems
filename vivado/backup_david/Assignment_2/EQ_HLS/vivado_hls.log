@@ -1,0 +1,19 @@
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Entvex' on host 'desktop-mbd2ksk' (Windows NT_amd64 version 6.2) on Tue Sep 25 09:44:57 +0200 2018
+INFO: [HLS 200-10] In directory 'D:/Xilinx/Assignment_2/EQ_HLS'
+INFO: [HLS 200-10] Opening project 'D:/Xilinx/Assignment_2/EQ_HLS/HLS'.
+INFO: [HLS 200-10] Opening solution 'D:/Xilinx/Assignment_2/EQ_HLS/HLS/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 25 09:45:04 2018...

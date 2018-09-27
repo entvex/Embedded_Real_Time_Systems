@@ -1,0 +1,13 @@
+12:51:15 **** Incremental Build of configuration Debug for project lab_matrix ****
+make all 
+'Building file: ../src/lab4.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -std=gnu11 -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -c -o "src/lab4.o" "../src/lab4.c"
+../src/lab4.c:1:25: fatal error: xparameters.h: No such file or directory
+ #include "xparameters.h"
+                         ^
+compilation terminated.
+make: *** [src/lab4.o] Error 1
+
+12:51:16 Build Finished (took 606ms)
+
