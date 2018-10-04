@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="iosc" xd:componentRef="iosc" xd:initiationInterval="5" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="ctrl" xd:originalName="ctrl" xd:direction="in" xd:interfaceRef="S_AXI_SLV0" xd:busTypeRef="axilite" xd:offset="0x14" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="inSwitch" xd:originalName="inSwitch" xd:direction="in" xd:interfaceRef="inSwitch" xd:busTypeRef="register" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="outLeds" xd:originalName="outLeds" xd:direction="out" xd:interfaceRef="outLeds" xd:busTypeRef="register" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="0" xd:worst-case="4" xd:average-case="2"/>
+  <xd:resourceEstimates xd:LUT="163" xd:FF="189" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

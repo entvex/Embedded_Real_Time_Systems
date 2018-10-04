@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: `csim.exe' is up to date.
+Note: VCD trace timescale unit is set by user to 1.000000e-009 sec.
+INFO: Simulating
+Test passed !
+Created IOSC_Wave.vcd
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

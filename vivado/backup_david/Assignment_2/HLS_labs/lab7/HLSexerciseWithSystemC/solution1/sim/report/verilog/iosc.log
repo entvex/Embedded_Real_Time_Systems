@@ -1,0 +1,20 @@
+@I [SIM-2] Generating simulation wrapper in SystemC ...
+@I [SIM-47] Using XSIM for RTL simulation.
+   Build using "D:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling ios_driver.cpp
+   Compiling iosc.cpp
+   Compiling iosc_controlOutLeds.cpp
+   Compiling iosc_pulse.cpp
+   Compiling tb_ios.cpp
+   Generating cosim.sc.exe
+@I [SIM-12] Generating RTL test bench ...
+@I [SIM-11] Starting SystemC simulation ...
+@E [SIM-357] SC simulation failed, nonzero return value '1'.
+Note: VCD trace timescale unit is set by user to 1.000000e-012 sec.
+Note: VCD trace timescale unit is set by user to 1.000000e-012 sec.
+Note: VCD trace timescale unit is set by user to 1.000000e-012 sec.
+Note: VCD trace timescale unit is set by user to 1.000000e-009 sec.
+INFO: Simulating
+Test failed !!!
+Created IOSC_Wave.vcd
+@E [SIM-4] *** C/RTL co-simulation finished: FAIL ***

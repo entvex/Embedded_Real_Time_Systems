@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source D:/Xilinx/Assignment_2/HLS_labs/lab7/HLSexerciseWithSystemC/solution1/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main D:/Xilinx/Assignment_2/HLS_labs/lab7/HLSexerciseWithSystemC/solution1/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="HLSexerciseWithSystemC" solutionName="solution1" date="2018-10-04T15:24:47.282+0200"/>
+        <logs message="ERROR: [COSIM 212-357] SC simulation failed, nonzero return value '1'." projectName="HLSexerciseWithSystemC" solutionName="solution1" date="2018-10-04T15:24:47.146+0200"/>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source D:/Xilinx/Assignment_2/HLS_labs/lab7/HLSexerciseWithSystemC/solution1/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main D:/Xilinx/Assignment_2/HLS_labs/lab7/HLSexerciseWithSystemC/solution1/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="HLSexerciseWithSystemC" solutionName="solution1" date="2018-10-04T15:22:21.313+0200"/>
+        <logs message="ERROR: [COSIM 212-357] SC simulation failed, nonzero return value '1'." projectName="HLSexerciseWithSystemC" solutionName="solution1" date="2018-10-04T15:22:21.186+0200"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCA 200-202] Port 'outLeds' has no reset." projectName="HLSexerciseWithSystemC" solutionName="solution1" date="2018-10-04T15:21:48.651+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (SC_IO/ios.cpp:15:2) in function 'iosc::controlOutLeds' is an infinite loop." projectName="HLSexerciseWithSystemC" solutionName="solution1" date="2018-10-04T15:21:48.577+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (SC_IO/ios.cpp:50:7) in function 'iosc::pulse' is an infinite loop." projectName="HLSexerciseWithSystemC" solutionName="solution1" date="2018-10-04T15:21:48.353+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&amp;ctrl' is deprecated. Please use the interface directive to specify the AXI interface." projectName="HLSexerciseWithSystemC" solutionName="solution1" date="2018-10-04T15:21:46.272+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

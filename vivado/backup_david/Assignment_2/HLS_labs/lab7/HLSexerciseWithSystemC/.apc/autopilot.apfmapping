@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ios.cpp" path="D:\Xilinx\Assignment_2\HLS_labs\lab7\SC_IO\ios.cpp"/>
+    <originFiles name="ios.h" path="D:\Xilinx\Assignment_2\HLS_labs\lab7\SC_IO\ios.h"/>
+  </source>
+  <testbench>
+    <originFiles name="ios_driver.cpp" path="D:\Xilinx\Assignment_2\HLS_labs\lab7\SC_IO\ios_driver.cpp"/>
+    <originFiles name="ios_driver.h" path="D:\Xilinx\Assignment_2\HLS_labs\lab7\SC_IO\ios_driver.h"/>
+    <originFiles name="tb_ios.cpp" path="D:\Xilinx\Assignment_2\HLS_labs\lab7\SC_IO\tb_ios.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
