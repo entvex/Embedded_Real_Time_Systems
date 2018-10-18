@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="eq" xd:componentRef="eq" xd:initiationInterval="52" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="b0" xd:originalName="b0" xd:direction="in" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="b1" xd:originalName="b1" xd:direction="in" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="b2" xd:originalName="b2" xd:direction="in" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="a1" xd:originalName="a1" xd:direction="in" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="a2" xd:originalName="a2" xd:direction="in" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:offset="0x30" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="band" xd:originalName="band" xd:direction="in" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="16"/>
+  <xd:arg xd:name="sampleIn" xd:originalName="sampleIn" xd:direction="in" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:offset="0x40" xd:handshakeRef="ap_none" xd:dataWidth="16"/>
+  <xd:arg xd:name="*(sampleOut)" xd:originalName="sampleOut" xd:direction="out" xd:interfaceRef="s_axi_eqio" xd:busTypeRef="axilite" xd:offset="0x48" xd:statusOffset="0x4C" xd:handshakeRef="ap_vld" xd:dataWidth="16"/>
+  <xd:latencyEstimates xd:best-case="3" xd:worst-case="51" xd:average-case="27"/>
+  <xd:resourceEstimates xd:LUT="1271" xd:FF="2259" xd:BRAM="2" xd:DSP="20"/>
+</xd:acceleratorMap>

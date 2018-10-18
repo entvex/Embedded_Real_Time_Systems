@@ -1,0 +1,10 @@
+set status(tv_done) 0
+set status(tvin) ""
+set status(wrapc_done) 0
+set status(bc_done) 0
+set status(bc_tb_done) 0
+set status(tvout) ""
+set status(sc_done) 1
+set status(cas_done) 0
+set status(hdl_tvin) "iosc.hdltvin.dat"
+set status(hdl_tvout) "iosc.hdltvout.dat"

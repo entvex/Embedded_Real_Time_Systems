@@ -1,0 +1,236 @@
+
+
+================================================================
+== Vivado HLS Report for 'iosc_pulse'
+================================================================
+* Date:           Thu Oct  4 15:21:49 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        HLSexerciseWithSystemC
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      3.91|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|    3|    3|    3|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    1|    1|         1|          -|          -|  inf |    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 0
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 3
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: clockCounter_V_1 (8)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:0  %clockCounter_V_1 = alloca i10
+
+ST_1: StgValue_5 (9)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:1  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str14, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str15)
+
+ST_1: StgValue_6 (10)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !84
+
+ST_1: StgValue_7 (11)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !88
+
+ST_1: StgValue_8 (12)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !92
+
+ST_1: StgValue_9 (13)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %inSwitch), !map !96
+
+ST_1: StgValue_10 (14)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !100
+
+ST_1: StgValue_11 (15)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i1* %internalPulse), !map !104
+
+ST_1: StgValue_12 (16)  [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i8* %iosc_switchs_V), !map !108
+
+ST_1: StgValue_13 (17)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:43
+_ZN7_ap_sc_7sc_core4waitEi.exit2:9  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
+
+ST_1: StgValue_14 (18)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:44
+_ZN7_ap_sc_7sc_core4waitEi.exit2:10  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
+
+ST_1: StgValue_15 (19)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:45
+_ZN7_ap_sc_7sc_core4waitEi.exit2:11  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
+
+ST_1: StgValue_16 (20)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:46
+_ZN7_ap_sc_7sc_core4waitEi.exit2:12  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
+
+ST_1: StgValue_17 (21)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:47
+_ZN7_ap_sc_7sc_core4waitEi.exit2:13  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
+
+ST_1: StgValue_18 (22)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:48
+_ZN7_ap_sc_7sc_core4waitEi.exit2:14  call void (...)* @_ssdm_op_SpecProcessDef([5 x i8]* @p_str, i32 2, [6 x i8]* @p_str16) nounwind
+
+ST_1: tmp_1 (23)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:48
+_ZN7_ap_sc_7sc_core4waitEi.exit2:15  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9)
+
+ST_1: StgValue_20 (24)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:48
+_ZN7_ap_sc_7sc_core4waitEi.exit2:16  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind
+
+ST_1: p_ssdm_reset_v (25)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:48
+_ZN7_ap_sc_7sc_core4waitEi.exit2:17  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind
+
+ST_1: StgValue_22 (26)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:44
+_ZN7_ap_sc_7sc_core4waitEi.exit2:18  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %internalPulse, i1 false)
+
+ST_1: empty (27)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:44
+_ZN7_ap_sc_7sc_core4waitEi.exit2:19  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind
+
+ST_1: empty_3 (28)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:44
+_ZN7_ap_sc_7sc_core4waitEi.exit2:20  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp_1)
+
+
+ <State 2>: 1.59ns
+ST_2: StgValue_25 (29)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:45
+_ZN7_ap_sc_7sc_core4waitEi.exit2:21  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_2: StgValue_26 (30)  [1/1] 1.59ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:22  store i10 0, i10* %clockCounter_V_1
+
+ST_2: StgValue_27 (31)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:46
+_ZN7_ap_sc_7sc_core4waitEi.exit2:23  br label %0
+
+
+ <State 3>: 3.91ns
+ST_3: clockCounter_V_1_loa (33)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:55
+:0  %clockCounter_V_1_loa = load i10* %clockCounter_V_1
+
+ST_3: tmp (34)  [1/1] 3.02ns  loc: SC_IO/ios.cpp:50
+:1  %tmp = icmp ugt i10 %clockCounter_V_1_loa, -24
+
+ST_3: StgValue_30 (35)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:50
+:2  br i1 %tmp, label %1, label %2
+
+ST_3: clockCounter_V (37)  [1/1] 2.32ns  loc: SC_IO/ios.cpp:55
+:0  %clockCounter_V = add i10 %clockCounter_V_1_loa, 1
+
+ST_3: StgValue_32 (38)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:56
+:1  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %internalPulse, i1 false)
+
+ST_3: StgValue_33 (39)  [1/1] 1.59ns  loc: SC_IO/ios.cpp:55
+:2  store i10 %clockCounter_V, i10* %clockCounter_V_1
+
+ST_3: StgValue_34 (40)  [1/1] 0.00ns
+:3  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
+
+ST_3: StgValue_35 (42)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:53
+:0  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %internalPulse, i1 true)
+
+ST_3: StgValue_36 (43)  [1/1] 1.59ns
+:1  store i10 0, i10* %clockCounter_V_1
+
+ST_3: StgValue_37 (44)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:54
+:2  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
+
+ST_3: StgValue_38 (46)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:58
+_ZN7_ap_sc_7sc_core4waitEi.exit:0  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_3: StgValue_39 (47)  [1/1] 0.00ns  loc: SC_IO/ios.cpp:59
+_ZN7_ap_sc_7sc_core4waitEi.exit:1  br label %0
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 1.59ns
+The critical path consists of the following:
+	'store' operation of constant 0 on local variable 'clockCounter.V' [30]  (1.59 ns)
+
+ <State 3>: 3.91ns
+The critical path consists of the following:
+	'load' operation ('clockCounter_V_1_loa', SC_IO/ios.cpp:55) on local variable 'clockCounter.V' [33]  (0 ns)
+	'add' operation ('clockCounter.V', SC_IO/ios.cpp:55) [37]  (2.32 ns)
+	'store' operation (SC_IO/ios.cpp:55) of variable 'clockCounter.V', SC_IO/ios.cpp:55 on local variable 'clockCounter.V' [39]  (1.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

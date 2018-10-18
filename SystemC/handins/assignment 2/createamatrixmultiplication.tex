@@ -1,0 +1,67 @@
+\section{Exercise 4 Create a Matrix Multiplication}
+In this lab we will create a Matrix Multiplication application.
+We will be using a set of functions called
+
+\begin{itemize}
+	\item setInputHatrices (VectorArray A, VectorArray B)
+	\item displayMatrix(VectorArray input)
+	\item multiMatrixSoft (VectorArray A,VectorArray B, VectorArray P)
+	\item multiMatrixHard(VectorArray A,VectorArray B, VectorArray P)
+\end{itemize} 
+
+The first function takes two input Matrices and populate them according to the exercise. An interesting thing to see is that because of how the matrices are defined in the exercise, the easiest way to fill them is  swapping the rows and cols in the inner loop.
+
+\begin{lstlisting}[style=customc++, caption= setInputHatrices ,
+label={lst:masterslaveadaptersource}]
+void setInputHatrices (VectorArray A, VectorArray B) {
+
+int valueA = 1;
+int valueB = 1;
+
+for (int i = 0; i < MSIZE; i++) { //Cols
+for (int j = 0; j < MSIZE; j++) { // Rows
+//Vector A
+A[i].com[j] = valueA;
+valueA++;
+//Vector B
+B[j].com[i] = valueB;
+}
+valueB++;
+}
+\end{lstlisting}
+
+The displayMatrix is printing out the matrices to see how it looks. We wanted it to look nice thats way we are also going the extra mile and added taps so the table is nicely formatted.
+
+\begin{lstlisting}[style=customc++, caption= displayMatrix ,
+label={lst:masterslaveadaptersource}]
+   void displayMatrix(VectorArray input) {
+
+for (int i = 0; i < MSIZE; i++) { //Cols
+for (int j = 0; j < MSIZE; j++) { // Rows
+xil_printf("%d \x9",input[i].com[j]); // ASCII tap 9
+}
+xil_printf("\r\n");
+}
+}
+\end{lstlisting}
+
+The multiMatrixSoft does the added and multiplication in software and that is not the fastest way of doing it. The fastest way of doing it is using our FPGA hence in hardware and it is very fast.
+
+\begin{lstlisting}[style=customc++, caption= displayMatrix ,
+label={lst:masterslaveadaptersource}]
+   void multiMatrixSoft (VectorArray A,VectorArray B, VectorArray P) {
+
+for (int k = 0; k < MSIZE; k++) {
+
+for (int j = 0; j < MSIZE; j++) { //Rows
+
+P[j].com[k] = 0;
+for (int i = 0; i < MSIZE; i++) { //Cols
+
+P[j].com[k] += (A[j].com[i])*(B[k].com[i]);
+}
+}
+}
+\end{lstlisting}
+
+In the end we can conclude that it is indeed possible to make a matrix multiplication application and it was nicely as expected.

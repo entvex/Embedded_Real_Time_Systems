@@ -1,0 +1,81 @@
+\section{Exercise 3 Create a Console Application}
+In this exercise we use the hardware and software platform that we made in exercise 2. In this lab we write a C-application that implements a command language interpreter, controlled via the USB-UART interface.
+
+With the following commands
+
+\begin{itemize}
+	\item Sets the binary value from 0-15 on the red led’s by reading switch input (SW0-SW3) 
+	\item Counts binary the red led’s using a timer of 1 sec. 
+\end{itemize}
+
+Here we read the values from the switches and it out on the leds.
+
+\begin{lstlisting}[style=customc++, caption= read switchs and set value on leds,
+label={lst:masterslaveadaptersource}]
+	   switch (value) {
+case 49: // ASCII 1
+xil_printf("case 1 \r\n");
+psb_check = XGpio_DiscreteRead(&push, 1);
+xil_printf("Push Buttons Status %x\r\n", psb_check);
+dip_check = XGpio_DiscreteRead(&dip, 1);
+xil_printf("DIP Switch Status %x\r\n", dip_check);
+LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR,0, dip_check);
+break;
+\end{lstlisting}
+
+To get the counter running we need to make some setup code first.
+
+\begin{lstlisting}[style=customc++, caption= setup timer,
+label={lst:masterslaveadaptersource}]
+   //TimerSetup
+XScuTimer Timer;
+#define ONE_SECOND 325000000
+XScuTimer_Config *ConfigPtr;
+XScuTimer *TimerInstancePtr = &Timer;
+
+ConfigPtr = XScuTimer_LookupConfig(XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+Status    = XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+
+if(Status != XST_SUCCESS) {
+xil_printf("Timer init() failed\r\n");
+return XST_FAILURE;
+}
+
+XScuTimer_LoadTimer(TimerInstancePtr,ONE_SECOND);
+XScuTimer_EnableAutoReload(TimerInstancePtr);
+\end{lstlisting}
+
+\pagebreak
+after that setup it's time to handle the extra case. When we fall into this case we start the timer. So that it will be running all the time.
+
+\begin{lstlisting}[style=customc++, caption= case 2: Counts binary the red led’s using a timer of 1 sec ,
+label={lst:masterslaveadaptersource}]
+		case 50: // ASCII 2
+xil_printf("case 2 \r\n");
+XScuTimer_Start(TimerInstancePtr);
+break;
+\end{lstlisting}
+
+Every time the timer elapses it runs the following code that makes the led go from 0 to 15.
+\begin{lstlisting}[style=customc++, caption= case 2: Counts binary the red led’s using a timer of 1 sec ,
+label={lst:masterslaveadaptersource}]
+	   if(XScuTimer_IsExpired(TimerInstancePtr)) {
+XScuTimer_ClearInterruptStatus(TimerInstancePtr);
+red_led_counter++;
+xil_printf("Current count: %d\r\n", red_led_counter);
+LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR,0, red_led_counter);
+}
+
+for (i=0; i<9999999; i++);
+\end{lstlisting}
+
+We can conclude that it works. The leds counts as it should and we learned that into from the serial is ASCII, but that was a easy fix.
+
+
+
+
+
+
+
+
+

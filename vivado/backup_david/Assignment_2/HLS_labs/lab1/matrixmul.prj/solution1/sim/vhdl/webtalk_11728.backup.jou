@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Sep 22 15:41:08 2018
+# Process ID: 11728
+# Current directory: D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/vhdl
+# Command line: wbtcv.exe -mode batch -source D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/vhdl/xsim.dir/matrixmul/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/vhdl/webtalk.log
+# Journal file: D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/vhdl\webtalk.jou
+#-----------------------------------------------------------
+source D:/Xilinx/Assignment_2/HLS_labs/lab1/matrixmul.prj/solution1/sim/vhdl/xsim.dir/matrixmul/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Sat Sep 22 13:17:46 2018
+# Process ID: 2384
+# Current directory: D:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_matrix/lab_matrix.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_matrix/lab_matrix.sdk/webtalk/webtalk.log
+# Journal file: D:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_matrix/lab_matrix.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

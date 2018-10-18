@@ -1,0 +1,835 @@
+
+
+================================================================
+== Vivado HLS Report for 'iosc'
+================================================================
+* Date:           Thu Oct  4 15:21:49 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        HLSexerciseWithSystemC
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      4.49|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    4|    1|    5|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+---------------------+-----+-----+-----+-----+---------+
+        |                               |                     |  Latency  |  Interval | Pipeline|
+        |            Instance           |        Module       | min | max | min | max |   Type  |
+        +-------------------------------+---------------------+-----+-----+-----+-----+---------+
+        |grp_iosc_pulse_fu_74           |iosc_pulse           |    3|    3|    3|    3|   none  |
+        |grp_iosc_controlOutLeds_fu_92  |iosc_controlOutLeds  |    3|    3|    3|    3|   none  |
+        +-------------------------------+---------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|      -|      -|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|    184|    163|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|      -|
+|Register         |        -|      -|      5|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|    189|    163|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|   ~0  |   ~0  |
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+---------------------+---------+-------+-----+----+
+    |            Instance           |        Module       | BRAM_18K| DSP48E|  FF | LUT|
+    +-------------------------------+---------------------+---------+-------+-----+----+
+    |grp_iosc_controlOutLeds_fu_92  |iosc_controlOutLeds  |        0|      0|  136|  98|
+    |grp_iosc_pulse_fu_74           |iosc_pulse           |        0|      0|   48|  65|
+    +-------------------------------+---------------------+---------+-------+-----+----+
+    |Total                          |                     |        0|      0|  184| 163|
+    +-------------------------------+---------------------+---------+-------+-----+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +---------------+---+----+-----+-----------+
+    |      Name     | FF| LUT| Bits| Const Bits|
+    +---------------+---+----+-----+-----------+
+    |internalPulse  |  1|   0|    1|          0|
+    |outLeds        |  4|   0|    4|          0|
+    +---------------+---+----+-----+-----------+
+    |Total          |  5|   0|    5|          0|
+    +---------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------+-----+-----+------------+--------------+--------------+
+| RTL Ports| Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------+-----+-----+------------+--------------+--------------+
+|clk       |  in |    1| ap_ctrl_hs |  iosc::iosc  | return value |
+|reset     |  in |    1| ap_ctrl_hs |  iosc::iosc  | return value |
+|ctrl      |  in |    4|   ap_none  |     ctrl     |    pointer   |
+|inSwitch  |  in |    4|   ap_none  |   inSwitch   |    pointer   |
+|outLeds   | out |    4|   ap_vld   |    outLeds   |    pointer   |
++----------+-----+-----+------------+--------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (iosc_ssdm_thread_s) | (iosc_ssdm_thread_1)
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 3.88ns
+ST_1: StgValue_3 (10)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str14, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str15)
+
+ST_1: StgValue_4 (11)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !84
+
+ST_1: StgValue_5 (12)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !88
+
+ST_1: StgValue_6 (13)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ctrl), !map !92
+
+ST_1: StgValue_7 (14)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i4* %inSwitch), !map !96
+
+ST_1: StgValue_8 (15)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !100
+
+ST_1: StgValue_9 (16)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i1* %internalPulse), !map !104
+
+ST_1: StgValue_10 (17)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i8* %iosc_switchs_V), !map !108
+
+ST_1: StgValue_11 (18)  [1/1] 0.00ns  loc: SC_IO/ios.h:20
+:8  call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @p_str, [5 x i8]* @p_str) nounwind
+
+ST_1: iosc_ssdm_thread_s (19)  [1/1] 0.00ns  loc: SC_IO/ios.h:21
+:9  %iosc_ssdm_thread_s = load i1* @iosc_ssdm_thread_M_controlOutLeds, align 1
+
+ST_1: StgValue_13 (20)  [1/1] 0.00ns  loc: SC_IO/ios.h:21
+:10  br i1 %iosc_ssdm_thread_s, label %1, label %2
+
+ST_1: StgValue_14 (22)  [1/1] 0.00ns  loc: SC_IO/ios.h:21
+:0  call void (...)* @_ssdm_op_SpecProcessDecl([5 x i8]* @p_str, i32 2, [15 x i8]* @p_str8) nounwind
+
+ST_1: StgValue_15 (23)  [1/1] 0.00ns  loc: SC_IO/ios.h:22
+:1  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str8, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
+
+ST_1: StgValue_16 (24)  [1/1] 0.00ns  loc: SC_IO/ios.h:23
+:2  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str8, [6 x i8]* @p_str3, i1* %reset, i32 3) nounwind
+
+ST_1: iosc_ssdm_thread_1 (25)  [1/1] 0.00ns  loc: SC_IO/ios.h:24
+:3  %iosc_ssdm_thread_1 = load i1* @iosc_ssdm_thread_M_pulse, align 1
+
+ST_1: StgValue_18 (26)  [1/1] 0.00ns  loc: SC_IO/ios.h:24
+:4  br i1 %iosc_ssdm_thread_1, label %3, label %4
+
+ST_1: StgValue_19 (28)  [1/1] 0.00ns  loc: SC_IO/ios.h:24
+:0  call void (...)* @_ssdm_op_SpecProcessDecl([5 x i8]* @p_str, i32 2, [6 x i8]* @p_str16) nounwind
+
+ST_1: StgValue_20 (29)  [1/1] 0.00ns  loc: SC_IO/ios.h:25
+:1  call void (...)* @_ssdm_op_SpecSensitive([6 x i8]* @p_str16, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
+
+ST_1: StgValue_21 (30)  [1/1] 0.00ns  loc: SC_IO/ios.h:26
+:2  call void (...)* @_ssdm_op_SpecSensitive([6 x i8]* @p_str16, [6 x i8]* @p_str3, i1* %reset, i32 3) nounwind
+
+ST_1: StgValue_22 (31)  [1/1] 0.00ns  loc: SC_IO/ios.h:27
+:3  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
+
+ST_1: StgValue_23 (32)  [1/1] 0.00ns  loc: SC_IO/ios.h:28
+:4  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
+
+ST_1: StgValue_24 (33)  [1/1] 0.00ns  loc: SC_IO/ios.h:29
+:5  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
+
+ST_1: StgValue_25 (34)  [1/1] 0.00ns  loc: SC_IO/ios.h:30
+:6  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
+
+ST_1: StgValue_26 (35)  [1/1] 0.00ns  loc: SC_IO/ios.h:31
+:7  call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
+
+ST_1: StgValue_27 (36)  [1/1] 0.00ns  loc: SC_IO/ios.h:32
+:8  call void (...)* @_ssdm_op_SpecChannel([5 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [14 x i8]* @p_str12, i32 1, i32 0, i1* %internalPulse) nounwind
+
+ST_1: StgValue_28 (37)  [1/1] 0.00ns  loc: SC_IO/ios.h:34
+:9  ret void
+
+ST_1: StgValue_29 (39)  [2/2] 0.00ns  loc: SC_IO/ios.h:24
+:0  call void @"iosc::pulse"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %internalPulse, i8* %iosc_switchs_V)
+
+ST_1: StgValue_30 (42)  [2/2] 3.88ns  loc: SC_IO/ios.h:21
+:0  call void @"iosc::controlOutLeds"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %internalPulse, i8* %iosc_switchs_V)
+
+
+ <State 2>: 2.07ns
+ST_2: StgValue_31 (39)  [1/2] 0.00ns  loc: SC_IO/ios.h:24
+:0  call void @"iosc::pulse"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %internalPulse, i8* %iosc_switchs_V)
+
+ST_2: StgValue_32 (40)  [1/1] 0.00ns
+:1  br label %UnifiedUnreachableBlock
+
+ST_2: StgValue_33 (42)  [1/2] 2.07ns  loc: SC_IO/ios.h:21
+:0  call void @"iosc::controlOutLeds"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i1* %internalPulse, i8* %iosc_switchs_V)
+
+ST_2: StgValue_34 (43)  [1/1] 0.00ns
+:1  br label %UnifiedUnreachableBlock
+
+ST_2: StgValue_35 (45)  [1/1] 0.00ns
+UnifiedUnreachableBlock:0  unreachable
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ clk]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ reset]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ ctrl]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ inSwitch]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ outLeds]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ internalPulse]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ iosc_switchs_V]:  wired=1; compound=0; hidden=1; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ iosc_ssdm_thread_M_controlOutLeds]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=1; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ iosc_ssdm_thread_M_pulse]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=1; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+StgValue_3         (specifcore     ) [ 000]
+StgValue_4         (specbitsmap    ) [ 000]
+StgValue_5         (specbitsmap    ) [ 000]
+StgValue_6         (specbitsmap    ) [ 000]
+StgValue_7         (specbitsmap    ) [ 000]
+StgValue_8         (specbitsmap    ) [ 000]
+StgValue_9         (specbitsmap    ) [ 000]
+StgValue_10        (specbitsmap    ) [ 000]
+StgValue_11        (spectopmodule  ) [ 000]
+iosc_ssdm_thread_s (load           ) [ 011]
+StgValue_13        (br             ) [ 000]
+StgValue_14        (specprocessdecl) [ 000]
+StgValue_15        (specsensitive  ) [ 000]
+StgValue_16        (specsensitive  ) [ 000]
+iosc_ssdm_thread_1 (load           ) [ 010]
+StgValue_18        (br             ) [ 000]
+StgValue_19        (specprocessdecl) [ 000]
+StgValue_20        (specsensitive  ) [ 000]
+StgValue_21        (specsensitive  ) [ 000]
+StgValue_22        (specport       ) [ 000]
+StgValue_23        (specport       ) [ 000]
+StgValue_24        (specport       ) [ 000]
+StgValue_25        (specport       ) [ 000]
+StgValue_26        (specport       ) [ 000]
+StgValue_27        (specchannel    ) [ 000]
+StgValue_28        (ret            ) [ 000]
+StgValue_31        (call           ) [ 000]
+StgValue_32        (br             ) [ 000]
+StgValue_33        (call           ) [ 000]
+StgValue_34        (br             ) [ 000]
+StgValue_35        (unreachable    ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="clk">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="clk"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="reset">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="reset"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="ctrl">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ctrl"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="inSwitch">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inSwitch"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="outLeds">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="outLeds"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="internalPulse">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="internalPulse"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="iosc_switchs_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="iosc_switchs_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="iosc_ssdm_thread_M_controlOutLeds">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="iosc_ssdm_thread_M_controlOutLeds"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="iosc_ssdm_thread_M_pulse">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="iosc_ssdm_thread_M_pulse"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecIFCore"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str10"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str15"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecProcessDecl"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecSensitive"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPort"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str7"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str12"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="iosc::pulse"/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1001" name="const_72">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="iosc::controlOutLeds"/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="grp_iosc_pulse_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="0" slack="0"/>
+<pin id="76" dir="0" index="1" bw="1" slack="0"/>
+<pin id="77" dir="0" index="2" bw="1" slack="0"/>
+<pin id="78" dir="0" index="3" bw="4" slack="0"/>
+<pin id="79" dir="0" index="4" bw="4" slack="0"/>
+<pin id="80" dir="0" index="5" bw="4" slack="0"/>
+<pin id="81" dir="0" index="6" bw="1" slack="0"/>
+<pin id="82" dir="0" index="7" bw="8" slack="0"/>
+<pin id="83" dir="1" index="8" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_29/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="grp_iosc_controlOutLeds_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="0" slack="0"/>
+<pin id="94" dir="0" index="1" bw="1" slack="0"/>
+<pin id="95" dir="0" index="2" bw="1" slack="0"/>
+<pin id="96" dir="0" index="3" bw="4" slack="0"/>
+<pin id="97" dir="0" index="4" bw="4" slack="0"/>
+<pin id="98" dir="0" index="5" bw="4" slack="0"/>
+<pin id="99" dir="0" index="6" bw="1" slack="0"/>
+<pin id="100" dir="0" index="7" bw="8" slack="0"/>
+<pin id="101" dir="1" index="8" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_30/1 "/>
+</bind>
+</comp>
+
+<comp id="110" class="1004" name="iosc_ssdm_thread_s_load_fu_110">
+<pin_list>
+<pin id="111" dir="0" index="0" bw="1" slack="0"/>
+<pin id="112" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="iosc_ssdm_thread_s/1 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1004" name="iosc_ssdm_thread_1_load_fu_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="1" slack="0"/>
+<pin id="116" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="iosc_ssdm_thread_1/1 "/>
+</bind>
+</comp>
+
+<comp id="118" class="1005" name="iosc_ssdm_thread_s_reg_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="1" slack="1"/>
+<pin id="120" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="iosc_ssdm_thread_s "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="84"><net_src comp="70" pin="0"/><net_sink comp="74" pin=0"/></net>
+
+<net id="85"><net_src comp="0" pin="0"/><net_sink comp="74" pin=1"/></net>
+
+<net id="86"><net_src comp="2" pin="0"/><net_sink comp="74" pin=2"/></net>
+
+<net id="87"><net_src comp="4" pin="0"/><net_sink comp="74" pin=3"/></net>
+
+<net id="88"><net_src comp="6" pin="0"/><net_sink comp="74" pin=4"/></net>
+
+<net id="89"><net_src comp="8" pin="0"/><net_sink comp="74" pin=5"/></net>
+
+<net id="90"><net_src comp="10" pin="0"/><net_sink comp="74" pin=6"/></net>
+
+<net id="91"><net_src comp="12" pin="0"/><net_sink comp="74" pin=7"/></net>
+
+<net id="102"><net_src comp="72" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="103"><net_src comp="0" pin="0"/><net_sink comp="92" pin=1"/></net>
+
+<net id="104"><net_src comp="2" pin="0"/><net_sink comp="92" pin=2"/></net>
+
+<net id="105"><net_src comp="4" pin="0"/><net_sink comp="92" pin=3"/></net>
+
+<net id="106"><net_src comp="6" pin="0"/><net_sink comp="92" pin=4"/></net>
+
+<net id="107"><net_src comp="8" pin="0"/><net_sink comp="92" pin=5"/></net>
+
+<net id="108"><net_src comp="10" pin="0"/><net_sink comp="92" pin=6"/></net>
+
+<net id="109"><net_src comp="12" pin="0"/><net_sink comp="92" pin=7"/></net>
+
+<net id="113"><net_src comp="14" pin="0"/><net_sink comp="110" pin=0"/></net>
+
+<net id="117"><net_src comp="16" pin="0"/><net_sink comp="114" pin=0"/></net>
+
+<net id="121"><net_src comp="110" pin="1"/><net_sink comp="118" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: outLeds | {1 2 }
+	Port: internalPulse | {1 2 }
+ - Input state : 
+	Port: iosc::iosc : ctrl | {1 2 }
+	Port: iosc::iosc : inSwitch | {1 2 }
+	Port: iosc::iosc : internalPulse | {1 2 }
+	Port: iosc::iosc : iosc_ssdm_thread_M_controlOutLeds | {1 }
+	Port: iosc::iosc : iosc_ssdm_thread_M_pulse | {1 }
+  - Chain level:
+	State 1
+		StgValue_13 : 1
+		StgValue_18 : 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------|---------|---------|---------|
+| Operation|        Functional Unit        |  Delay  |    FF   |   LUT   |
+|----------|-------------------------------|---------|---------|---------|
+|   call   |      grp_iosc_pulse_fu_74     |  1.588  |    45   |    20   |
+|          | grp_iosc_controlOutLeds_fu_92 |  1.773  |   133   |    58   |
+|----------|-------------------------------|---------|---------|---------|
+|   Total  |                               |  3.361  |   178   |    78   |
+|----------|-------------------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++--------------------------+--------+
+|                          |   FF   |
++--------------------------+--------+
+|iosc_ssdm_thread_s_reg_118|    1   |
++--------------------------+--------+
+|           Total          |    1   |
++--------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    3   |   178  |   78   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |
+|  Register |    -   |    1   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    3   |   179  |   78   |
++-----------+--------+--------+--------+

@@ -1,0 +1,5 @@
+sv xil_defaultlib "iosc.autotb.v"
+sv xil_defaultlib "iosc.v"
+sv xil_defaultlib "iosc_controlOutLeds.v"
+sv xil_defaultlib "iosc_pulse.v"
+

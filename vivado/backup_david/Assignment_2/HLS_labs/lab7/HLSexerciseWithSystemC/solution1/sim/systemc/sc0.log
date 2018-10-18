@@ -1,0 +1,7 @@
+   Build using "D:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling ios_driver.cpp
+   Compiling iosc.cpp
+   Compiling iosc_controlOutLeds.cpp
+   Compiling iosc_pulse.cpp
+   Compiling tb_ios.cpp
+   Generating cosim.sc.exe

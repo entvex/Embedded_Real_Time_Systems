@@ -1,0 +1,586 @@
+
+*** Running vivado
+    with args -log design_1_iosc_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_iosc_0_1.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_iosc_0_1.tcl -notrace
+Command: synth_design -top design_1_iosc_0_1 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13052 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 310.426 ; gain = 81.461
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_iosc_0_1' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ip/design_1_iosc_0_1/synth/design_1_iosc_0_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'iosc_top' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_top.v:9]
+INFO: [Synth 8-638] synthesizing module 'iosc' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc.v:12]
+INFO: [Synth 8-638] synthesizing module 'iosc_pulse' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_pulse.v:10]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_pulse.v:35]
+INFO: [Synth 8-638] synthesizing module 'iosc_dadd_64ns_64bkb' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_dadd_64ns_64bkb.v:11]
+INFO: [Synth 8-638] synthesizing module 'iosc_ap_dadd_3_full_dsp_64' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/ip/iosc_ap_dadd_3_full_dsp_64.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_4' declared at 'd:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/4a02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_4' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/ip/iosc_ap_dadd_3_full_dsp_64.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'iosc_ap_dadd_3_full_dsp_64' (27#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/ip/iosc_ap_dadd_3_full_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'iosc_dadd_64ns_64bkb' (28#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_dadd_64ns_64bkb.v:11]
+INFO: [Synth 8-638] synthesizing module 'iosc_dcmp_64ns_64cud' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_dcmp_64ns_64cud.v:11]
+INFO: [Synth 8-638] synthesizing module 'iosc_ap_dcmp_0_no_dsp_64' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/ip/iosc_ap_dcmp_0_no_dsp_64.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_4' declared at 'd:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/4a02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_4' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/ip/iosc_ap_dcmp_0_no_dsp_64.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'iosc_ap_dcmp_0_no_dsp_64' (31#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/ip/iosc_ap_dcmp_0_no_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'iosc_dcmp_64ns_64cud' (32#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_dcmp_64ns_64cud.v:11]
+INFO: [Synth 8-256] done synthesizing module 'iosc_pulse' (33#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_pulse.v:10]
+INFO: [Synth 8-638] synthesizing module 'iosc_controlOutLeds' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_controlOutLeds.v:10]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_controlOutLeds.v:36]
+INFO: [Synth 8-256] done synthesizing module 'iosc_controlOutLeds' (34#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_controlOutLeds.v:10]
+INFO: [Synth 8-256] done synthesizing module 'iosc' (35#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc.v:12]
+WARNING: [Synth 8-350] instance 'iosc_U' of module 'iosc' requires 6 connections, but only 5 given [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_top.v:90]
+INFO: [Synth 8-638] synthesizing module 'iosc_slv0_if' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_slv0_if.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_slv0_if.v:172]
+INFO: [Synth 8-256] done synthesizing module 'iosc_slv0_if' (36#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_slv0_if.v:9]
+INFO: [Synth 8-638] synthesizing module 'iosc_ap_rst_if' [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_ap_rst_if.v:10]
+INFO: [Synth 8-256] done synthesizing module 'iosc_ap_rst_if' (37#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_ap_rst_if.v:10]
+INFO: [Synth 8-256] done synthesizing module 'iosc_top' (38#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_top.v:9]
+INFO: [Synth 8-256] done synthesizing module 'design_1_iosc_0_1' (39#1) [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ip/design_1_iosc_0_1/synth/design_1_iosc_0_1.v:57]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[31]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[30]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[29]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[28]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[27]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[26]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[25]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[24]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[23]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[22]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[21]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[20]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[19]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[18]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[17]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[16]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[15]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[14]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[13]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[12]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[11]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[10]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[9]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[8]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[7]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[6]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[5]
+WARNING: [Synth 8-3331] design iosc_slv0_if has unconnected port WDATA[4]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized90 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized90 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized90 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized90 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized90 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized88 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized88 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized88 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized88 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized88 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized2 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized39 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized39 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized39 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized39 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized39 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_ne_im has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized29 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized29 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized29 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized29 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized29 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized5 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized5 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized5 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized5 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized5 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized63 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized63 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized63 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized63 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized63 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized86 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized86 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized86 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized86 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized86 has unconnected port SINIT
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port m_axis_result_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port m_axis_result_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port aclken
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port aresetn
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_a_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_a_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_b_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_b_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tvalid
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[63]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[62]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[61]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[60]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[59]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[58]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[57]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[56]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[55]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[54]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[53]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[52]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[51]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[50]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[49]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[48]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[47]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[46]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[45]
+WARNING: [Synth 8-3331] design floating_point_v7_1_4_viv__parameterized1 has unconnected port s_axis_c_tdata[44]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 403.609 ; gain = 174.645
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 403.609 ; gain = 174.645
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 309 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ip/design_1_iosc_0_1/constraints/iosc_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ip/design_1_iosc_0_1/constraints/iosc_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.runs/design_1_iosc_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.runs/design_1_iosc_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  FDE => FDRE: 5 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.284 . Memory (MB): peak = 607.746 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 607.746 ; gain = 378.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 607.746 ; gain = 378.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  D:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.runs/design_1_iosc_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 607.746 ; gain = 378.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "op_tdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "notrhs_fu_138_p2" won't be mapped to RAM because address size (52) is larger than maximum supported(25)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_fu_148_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element v_assign_fu_106_reg was removed.  [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_controlOutLeds.v:64]
+INFO: [Synth 8-5546] ROM "rdata" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 607.746 ; gain = 378.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/SUB_DELAY' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/SUBTRACT_PREADD_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/YES_DIST_1.DIST_1_PREADD_DEL' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/ALIGN_BLK/YES_DIST_1.DIST_1_ADD_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_DEL' (delay__parameterized7) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/NORM/ROUND/NORMALIZE_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dcmp_64ns_64cud_U5/iosc_ap_dcmp_0_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dcmp_64ns_64cud_U5/iosc_ap_dcmp_0_no_dsp_64_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dcmp_64ns_64cud_U5/iosc_ap_dcmp_0_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dcmp_64ns_64cud_U5/iosc_ap_dcmp_0_no_dsp_64_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dcmp_64ns_64cud_U5/iosc_ap_dcmp_0_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dcmp_64ns_64cud_U5/iosc_ap_dcmp_0_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dcmp_64ns_64cud_U5/iosc_ap_dcmp_0_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dcmp_64ns_64cud_U5/iosc_ap_dcmp_0_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "iosc_slv0_if_U/rdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "iosc_U/grp_iosc_pulse_fu_72/notrhs_fu_138_p2" won't be mapped to RAM because address size (52) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg was removed.  [d:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.srcs/sources_1/bd/design_1/ipshared/8b92/hdl/verilog/iosc_controlOutLeds.v:64]
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[32]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[33]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[34]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[35]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[36]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[37]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[38]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[39]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[40]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[41]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[42]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[43]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[44]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[45]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[46]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[47]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[48]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[49]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[50]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[51]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[52]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[53]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[0]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[1]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[2]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[3]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[4]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[5]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[6]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[7]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[8]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[9]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[10]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[11]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[12]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[13]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[14]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[15]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[16]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[17]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[18]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[19]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[20]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[21]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[22]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[23]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[24]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[25]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[26]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[27]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[28]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[29]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[30]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[31]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[53]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[54]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[54]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[55]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[55]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[56]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[56]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[57]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[57]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[58]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[58]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[59]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[59]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[60]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[60]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[61]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[61] )
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[62]' (FD) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[63] )
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[4]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[5]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[6]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[7]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[8]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[9]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[10]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[11]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[12]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[13]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[14]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[15]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[16]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[17]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[18]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[19]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[20]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[21]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[22]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[23]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[24]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[25]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[26]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[27]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[28]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[29]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_slv0_if_U/rdata_reg[30]' (FDRE) to 'inst/iosc_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\iosc_slv0_if_U/rdata_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/A_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/SUB_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'inst/iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/iosc_ap_dadd_3_full_dsp_64_u/U0 /i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[51] )
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_4_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_4_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/INV_OP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_4_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_4_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[51]) is unused and will be removed from module floating_point_v7_1_4_viv.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_pulse_fu_72/ap_CS_fsm_reg[0]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[63]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_pulse_fu_72/iosc_dadd_64ns_64bkb_U4/din1_buf1_reg[61]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/ap_CS_fsm_reg[0]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[4]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[5]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[6]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[7]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[8]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[9]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[10]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[11]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[12]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[13]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[14]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[15]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[16]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[17]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[18]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[19]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[20]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[21]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[22]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[23]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[24]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[25]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[26]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[27]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[28]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[29]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[30]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_U/grp_iosc_controlOutLeds_fu_90/v_assign_fu_106_reg[31]) is unused and will be removed from module iosc_top.
+WARNING: [Synth 8-3332] Sequential element (iosc_slv0_if_U/rdata_reg[31]) is unused and will be removed from module iosc_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 607.746 ; gain = 378.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 685.598 ; gain = 456.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 699.746 ; gain = 470.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 712.023 ; gain = 483.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 712.023 ; gain = 483.059
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 712.023 ; gain = 483.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 712.023 ; gain = 483.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 712.023 ; gain = 483.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 712.023 ; gain = 483.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 712.023 ; gain = 483.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    12|
+|2     |DSP48E1   |     2|
+|3     |DSP48E1_1 |     1|
+|4     |LUT1      |    26|
+|5     |LUT2      |   184|
+|6     |LUT3      |   120|
+|7     |LUT4      |    81|
+|8     |LUT5      |    96|
+|9     |LUT6      |   383|
+|10    |MUXCY     |   211|
+|11    |MUXF7     |    10|
+|12    |MUXF8     |     1|
+|13    |XORCY     |    44|
+|14    |FDE       |     5|
+|15    |FDRE      |   425|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 712.023 ; gain = 483.059
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 273 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 712.023 ; gain = 278.922
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 712.023 ; gain = 483.059
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 275 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 67 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 62 instances
+  FDE => FDRE: 5 instances
+
+211 Infos, 136 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 712.023 ; gain = 484.688
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab_7/lab_7.runs/design_1_iosc_0_1_synth_1/design_1_iosc_0_1.dcp' has been generated.

@@ -1,0 +1,121 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Oct  4 15:28:07 2018
+| Host         : DESKTOP-MBD2KSK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_iosc_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_iosc_0_1 (xilinx.com:hls:iosc:1.0) from (Rev. 1810041434) to (Rev. 1810041527)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Oct  4 14:34:53 2018
+| Host         : DESKTOP-MBD2KSK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_iosc_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_iosc_0_0 (xilinx.com:hls:iosc:1.0) from (Rev. 1810041133) to (Rev. 1810041434)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Oct  4 11:35:18 2018
+| Host         : DESKTOP-MBD2KSK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_iosc_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_iosc_0_1 (xilinx.com:hls:iosc:1.0) from (Rev. 1810041107) to (Rev. 1810041133)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Oct  4 11:09:10 2018
+| Host         : DESKTOP-MBD2KSK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_iosc_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_iosc_0_0 (xilinx.com:hls:iosc:1.0) from (Rev. 1810041036) to (Rev. 1810041107)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Oct  4 10:08:28 2018
+| Host         : DESKTOP-MBD2KSK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_iosc_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_iosc_0_0 (xilinx.com:hls:iosc:1.0) from (Rev. 1810031614) to (Rev. 1810041004)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Wed Oct  3 16:15:45 2018
+| Host         : DESKTOP-MBD2KSK running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_iosc_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_iosc_0_2 (xilinx.com:hls:iosc:1.0) from (Rev. 1810031508) to (Rev. 1810031614)
+

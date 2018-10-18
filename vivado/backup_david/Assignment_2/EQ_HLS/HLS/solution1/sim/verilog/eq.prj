@@ -1,0 +1,10 @@
+sv xil_defaultlib "AESL_axi_slave_eqio.v"
+sv xil_defaultlib "eq.autotb.v"
+sv xil_defaultlib "eq.v"
+sv xil_defaultlib "eq_coeff.v"
+sv xil_defaultlib "eq_eqio_s_axi.v"
+sv xil_defaultlib "eq_mul_16s_32s_32_2.v"
+sv xil_defaultlib "eq_mul_17s_32s_32_2.v"
+sv xil_defaultlib "eq_x1_fix.v"
+sv xil_defaultlib "eq_y1_fix.v"
+

@@ -1,0 +1,16 @@
+com.xilinx.sdk.linkgen.prefs.lab4\:.bss=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.data=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.data1=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.fixup=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.rodata=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.rodata1=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.sbss=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.sbss2=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.sdata=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.sdata2=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:.text=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:heap=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:heap-size=1024
+com.xilinx.sdk.linkgen.prefs.lab4\:stack=ps7_ram_0
+com.xilinx.sdk.linkgen.prefs.lab4\:stack-size=1024
+eclipse.preferences.version=1
