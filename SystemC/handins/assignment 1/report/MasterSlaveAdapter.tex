@@ -1,6 +1,6 @@
 \section{Exercise 3.5 - Master and slave with adapter}
 
-In this exercise we move from the TCL modeling layer to BCAM by implementing a adapter between the master and slave (source and sink) from the previous exercise. The source simply puts data on a FIFO queue, then the adapter is responsible for handling and converting the data to the bus cycle accurate interface on the receiving sink. Figure \ref{fig:masterslaveadapter} exhibits the setup.
+In this exercise we model the TLM layer with a FIFO queue and the BCAM layer by implementing a adapter between the master and slave (source and sink) from the previous exercise that handles. The source simply puts data on a FIFO queue, then the adapter is responsible for handling and converting the data to the bus cycle accurate interface on the receiving sink. Figure \ref{fig:masterslaveadapter} exhibits the setup.
 
 \begin{figure}[h]
 	\centering
